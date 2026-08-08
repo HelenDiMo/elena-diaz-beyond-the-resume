@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -12,11 +13,21 @@ export default function Header() {
 
           <nav>
             <ul className="flex gap-6">
-              <li>Inicio</li>
-              <li>Timeline</li>
-              <li>Skills</li>
-              <li>Proyectos</li>
-              <li>Contacto</li>
+              <li>
+                <Link href="/">Inicio</Link>
+              </li>
+              <li>
+                <Link href="/#experience">Experiencia</Link>
+              </li>
+              <li>
+                <Link href="/skills">Skills & Tools</Link>
+              </li>
+              <li>
+                <Link href="/projects">Proyectos</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contacto</Link>
+              </li>
             </ul>
           </nav>
         </div>
