@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="border-b">
       <Container>
-        <div className="flex items-center justify-between py-6">
+        <div className="flex flex-col items-right gap-4 py-6 md:flex-row md:justify-between">
           <div>
             <h1 className="text-xl font-bold">Elena Díaz</h1>
             <p className="text-sm">Beyond the Resume</p>
@@ -15,7 +15,7 @@ export default function Header() {
 
           <div className="flex items-center gap-6">
             <nav>
-              <ul className="flex gap-6">
+              <ul className="flex flex-wrap justify-left gap-4 md:gap-6">
                 <li>
                   <Link href="/">Inicio</Link>
                 </li>
@@ -34,9 +34,10 @@ export default function Header() {
               </ul>
             </nav>
 
-            <LanguageToggle />
-            
-            <ThemeToggle />
+            <div className="flex items-right gap-3">
+              <LanguageToggle />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </Container>
