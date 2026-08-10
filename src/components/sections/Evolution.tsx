@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Timeline from "@/components/sections/Timeline";
 
 export default function Evolution() {
   return (
@@ -25,8 +26,12 @@ export default function Evolution() {
             nuevas competencias tecnológicas para analizar problemas desde
             diferentes perspectivas.
           </p>
+
+          <Timeline />
+          
         </div>
       </Container>
+      
     </section>
   );
 }
