@@ -34,7 +34,7 @@ export default function Header() {
               </ul>
             </nav>
 
-            <div className="flex items-right gap-3">
+            <div className="flex items-right gap-2">
               <LanguageToggle />
               <ThemeToggle />
             </div>
