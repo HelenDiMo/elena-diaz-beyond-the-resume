@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { projects } from "@/data/projects";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -28,6 +29,14 @@ export default function Projects() {
               key={project.slug}
               className="flex flex-col rounded-xl border p-6"
             >
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={600}
+                height={400}
+                className="mb-6 aspect-video w-full rounded-lg object-cover"
+              />
+              
               <p className="text-sm font-medium uppercase tracking-wide">
                 {project.category}
               </p>

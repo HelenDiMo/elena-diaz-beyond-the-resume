@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
+import Image from "next/image";
 
 export default async function ProjectPage({
   params,
@@ -33,6 +34,13 @@ export default async function ProjectPage({
           <h1 className="mt-4 text-5xl font-bold md:text-6xl">
             {project.title}
           </h1>
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={1200}
+            height={675}
+            className="mt-8 aspect-video w-full rounded-xl object-cover"
+          />
 
           <p className="mt-6 max-w-3xl text-lg leading-relaxed">
             {project.description}

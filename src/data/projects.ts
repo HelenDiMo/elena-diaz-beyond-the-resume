@@ -7,6 +7,7 @@ export const projects = [
       "Proyecto de análisis y visualización de datos orientado a transformar información operativa en conocimiento útil para la toma de decisiones.",
     technologies: ["Power BI", "Data Analysis"],
     github: "https://github.com/HelenDiMo/archaios-data-Intelligence.git",
+    image: "/projects/archaios-data-intelligence.png",
   },
   {
     slug: "app-climatica-avanzada",
