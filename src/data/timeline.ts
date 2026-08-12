@@ -1,27 +1,21 @@
 export const timeline = [
   {
-    year: "2008",
-    title: "Administración",
-    description:
-      "Inicio de mi trayectoria profesional en el ámbito administrativo, desarrollando experiencia en gestión, organización y procesos.",
-  },
-  {
-    year: "2012",
-    title: "Finanzas",
-    description:
-      "Evolución hacia funciones relacionadas con contabilidad, gestión financiera y análisis de información.",
-  },
-  {
-    year: "2018",
+    year: "2011 – 2019",
     title: "Turismo",
     description:
-      "Experiencia en un sector orientado al cliente y a la gestión, ampliando mi visión de negocio.",
+      "Inicio de mi trayectoria profesional: Atención al Cliente, gestión, organización y procesos.",
   },
   {
-    year: "2024",
-    title: "Data",
+    year: "2015",
+    title: "Marketing Digital",
     description:
-      "Comienzo de mi transición hacia el análisis de datos y la programación.",
+      "Atención al cliente, creación de contenido y anuncios, SEO, SEM y KeyWords",
+  },
+  {
+    year: "2020 - 2026",
+    title: "Administración y Contabilidad",
+    description:
+      "Evolución hacia funciones relacionadas con contabilidad, gestión financiera y análisis de información.",
   },
   {
     year: "2026",

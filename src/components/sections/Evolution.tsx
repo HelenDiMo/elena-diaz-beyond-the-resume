@@ -15,23 +15,25 @@ export default function Evolution() {
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed">
-            Mi trayectoria profesional comenzó en la administración, las
-            finanzas y el turismo. Con más de 13 años de experiencia, he ido
-            incorporando nuevas herramientas y conocimientos hasta evolucionar
-            hacia el análisis de datos y la inteligencia artificial.
+            Mi trayectoria profesional recoge una amplia gama de habiliades relacionadas
+            con el sector turístico, la gestión empresarial y las operaciones en entornos nacionales e internacionales, 
           </p>
 
           <p className="mt-4 text-lg leading-relaxed">
-            Hoy combino experiencia de negocio, conocimiento financiero y
-            nuevas competencias tecnológicas para analizar problemas desde
-            diferentes perspectivas.
+            Con más de 13 años de experiencia, he ido incorporando nuevas
+            herramientas y conocimientos hasta evolucionar hacia el análisis de
+            datos y la inteligencia artificial.
+          </p>
+
+          <p className="mt-4 text-lg leading-relaxed">
+            Hoy combino experiencia de negocio, conocimiento financiero y nuevas
+            competencias tecnológicas para analizar problemas desde diferentes
+            perspectivas.
           </p>
 
           <Timeline />
-          
         </div>
       </Container>
-      
     </section>
   );
 }
