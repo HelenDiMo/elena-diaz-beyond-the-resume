@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import { skills } from "@/data/skills";
+import Certifications from "@/components/sections/Certifications";
 
 type SkillCardProps = {
   title: string;
@@ -75,6 +76,7 @@ export default function Skills() {
               description={skills.softSkills.description}
               items={skills.softSkills.items}
             />
+            <Certifications />
           </div>
         </div>
       </Container>

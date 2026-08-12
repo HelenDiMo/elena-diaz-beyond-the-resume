@@ -23,7 +23,7 @@ export default function Header() {
                   <Link href="/#experience">Experiencia</Link>
                 </li>
                 <li>
-                  <Link href="/#skills">Skills & Tools</Link>
+                  <Link href="/#skills"> Skills & Tools </Link>
                 </li>
                 <li>
                   <Link href="/#projects">Proyectos</Link>
