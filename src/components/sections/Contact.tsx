@@ -9,9 +9,7 @@ export default function Contact() {
             Contacto
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Hablemos
-          </h2>
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl">Hablemos</h2>
 
           <p className="mt-6 text-lg leading-relaxed">
             Si quieres conocer más sobre mi perfil, hablar de un proyecto o
@@ -23,10 +21,7 @@ export default function Contact() {
           {/* Formulario */}
           <form className="space-y-6">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium"
-              >
+              <label htmlFor="name" className="block text-sm font-medium">
                 Nombre
               </label>
 
@@ -40,10 +35,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium"
-              >
+              <label htmlFor="subject" className="block text-sm font-medium">
                 Asunto
               </label>
 
@@ -57,10 +49,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium"
-              >
+              <label htmlFor="message" className="block text-sm font-medium">
                 Mensaje
               </label>
 
