@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container";
 import DashboardStats from "@/components/sections/DashboardStats";
 import GitHubStats from "@/components/sections/GitHubStats";
 import EducationStats from "@/components/sections/EducationStats";
+import ExperienceStats from "@/components/sections/ExperienceStats";
 
 export default function Dashboard() {
   return (
@@ -30,10 +31,7 @@ export default function Dashboard() {
 
           <EducationStats />
 
-          <article className="rounded-xl border p-6">
-            <h3 className="text-xl font-semibold">Experiencia</h3>
-            <p className="mt-3">Evolución de mi trayectoria profesional.</p>
-          </article>
+          <ExperienceStats />
 
           <article className="rounded-xl border p-6">
             <h3 className="text-xl font-semibold">Aprendizaje</h3>
