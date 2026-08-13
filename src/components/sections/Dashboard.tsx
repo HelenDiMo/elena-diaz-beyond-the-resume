@@ -3,6 +3,7 @@ import DashboardStats from "@/components/sections/DashboardStats";
 import GitHubStats from "@/components/sections/GitHubStats";
 import EducationStats from "@/components/sections/EducationStats";
 import ExperienceStats from "@/components/sections/ExperienceStats";
+import LearningStats from "@/components/sections/LearningStats";
 
 export default function Dashboard() {
   return (
@@ -26,17 +27,16 @@ export default function Dashboard() {
         <div className="mt-16 space-y-16">
           <DashboardStats />
         </div>
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
           <GitHubStats />
 
           <EducationStats />
 
           <ExperienceStats />
+        
+          <LearningStats />
 
-          <article className="rounded-xl border p-6">
-            <h3 className="text-xl font-semibold">Aprendizaje</h3>
-            <p className="mt-3">Tecnologías y conocimientos adquiridos.</p>
-          </article>
         </div>
       </Container>
     </section>
