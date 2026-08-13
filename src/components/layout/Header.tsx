@@ -32,7 +32,7 @@ export default function Header() {
                   <Link href="/#dashboard">Dashboard</Link>
                 </li>
                 <li>
-                  <Link href="/contact">Contacto</Link>
+                  <Link href="/#contact">Contacto</Link>
                 </li>
               </ul>
             </nav>
