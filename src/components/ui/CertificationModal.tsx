@@ -44,21 +44,13 @@ export default function CertificationModal({
           {certification.category}
         </p>
 
-        <h2 className="mt-2 text-2xl font-bold">
-          {certification.title}
-        </h2>
+        <h2 className="mt-2 text-2xl font-bold">{certification.title}</h2>
 
-        <p className="mt-2">
-          {certification.issuer}
-        </p>
+        <p className="mt-2">{certification.issuer}</p>
 
-        <p className="mt-1 text-sm">
-          {certification.date}
-        </p>
+        <p className="mt-1 text-sm">{certification.date}</p>
 
-        <p className="mt-6 leading-relaxed">
-          {certification.description}
-        </p>
+        <p className="mt-6 leading-relaxed">{certification.description}</p>
 
         {certification.credentialUrl && (
           <a
