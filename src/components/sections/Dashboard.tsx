@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import DashboardStats from "@/components/sections/DashboardStats";
 import GitHubStats from "@/components/sections/GitHubStats";
+import EducationStats from "@/components/sections/EducationStats";
 
 export default function Dashboard() {
   return (
@@ -27,10 +28,7 @@ export default function Dashboard() {
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <GitHubStats />
 
-          <article className="rounded-xl border p-6">
-            <h3 className="text-xl font-semibold">Formación</h3>
-            <p className="mt-3">Cursos, certificaciones y formación.</p>
-          </article>
+          <EducationStats />
 
           <article className="rounded-xl border p-6">
             <h3 className="text-xl font-semibold">Experiencia</h3>
