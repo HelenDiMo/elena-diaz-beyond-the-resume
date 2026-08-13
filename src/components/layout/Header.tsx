@@ -29,6 +29,9 @@ export default function Header() {
                   <Link href="/#projects">Proyectos</Link>
                 </li>
                 <li>
+                  <Link href="/#dashboard">Dashboard</Link>
+                </li>
+                <li>
                   <Link href="/contact">Contacto</Link>
                 </li>
               </ul>
