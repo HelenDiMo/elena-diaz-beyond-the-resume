@@ -14,7 +14,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 text-sm font-medium uppercase tracking-[0.3em]"
+            className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-teal"
           >
             Business · Data · AI
           </motion.p>
@@ -27,7 +27,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-5xl font-bold tracking-tight md:text-7xl"
+            className="text-5xl font-bold tracking-tight md:text-7xl text-oceanic"
           >
             Elena Díaz
           </motion.h1>

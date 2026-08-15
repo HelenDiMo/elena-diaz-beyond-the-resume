@@ -1,7 +1,7 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
 import LanguageToggle from "@/components/ui/LanguageToggle";
-import ThemeToggle from "./ThemeToggle";
+/* import ThemeToggle from "./ThemeToggle"; -> PORQUE DE MOMENTO NO LO VAMOS A UTILIZAR*/
 
 export default function Header() {
   return (
@@ -69,7 +69,7 @@ export default function Header() {
 
             <div className="flex items-right gap-2">
               <LanguageToggle />
-              <ThemeToggle />
+              {/* <ThemeToggle /> -> PORQUE DE MOMENTO NO LO VAMOS A UTILIZAR */}
             </div>
           </div>
         </div>
