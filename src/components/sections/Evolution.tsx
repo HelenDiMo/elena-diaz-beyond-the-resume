@@ -6,17 +6,18 @@ export default function Evolution() {
     <section id="experience" className="py-24">
       <Container>
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-teal">
             Mi evolución
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            De la experiencia al dato
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl text-oceanic">
+            De la Experiencia al Dato
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed">
-            Mi trayectoria profesional recoge una amplia gama de habiliades relacionadas
-            con el sector turístico, la gestión empresarial y las operaciones en entornos nacionales e internacionales, 
+            Mi trayectoria profesional reúne experiencia en el sector turístico,
+            la administración, la gestión empresarial y las operaciones en
+            entornos nacionales e internacionales.
           </p>
 
           <p className="mt-4 text-lg leading-relaxed">
@@ -26,9 +27,9 @@ export default function Evolution() {
           </p>
 
           <p className="mt-4 text-lg leading-relaxed">
-            Hoy combino experiencia de negocio, conocimiento financiero y nuevas
+            Hoy combino experiencia de negocio, conocimiento financiero y
             competencias tecnológicas para analizar problemas desde diferentes
-            perspectivas.
+            perspectivas y construir soluciones con una visión global.
           </p>
 
           <Timeline />
