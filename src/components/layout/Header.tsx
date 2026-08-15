@@ -7,11 +7,14 @@ export default function Header() {
   return (
     <header className="border-b">
       <Container>
-        <div className="flex flex-col items-right gap-4 py-6 md:flex-row md:justify-between">
-          <div>
-            <h1 className="text-oceanic">Elena Díaz</h1>
+        {/*<div className="flex flex-col items-center gap-4 py-6 md:flex-row md:justify-center">
+        YA NO NOS HACE FALTA TODO ESTO PORQUE NO TENEMOS UN BLOQUE DE MARCA */}
+
+        <div className="flex items-center justify-center py-6">
+          {/*<div>
+            <h1 className="text-oceanic">Elena Díaz</h1> 
             <p className="text-teal">Beyond the Resume</p>
-          </div>
+          </div>     -> QUITAMOS EL TITULITO */}
 
           <div className="flex items-center gap-6">
             <nav>
@@ -69,6 +72,7 @@ export default function Header() {
 
             <div className="flex items-right gap-2">
               <LanguageToggle />
+
               {/* <ThemeToggle /> -> PORQUE DE MOMENTO NO LO VAMOS A UTILIZAR */}
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -14,7 +15,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-teal"
+            className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-teal"
           >
             Business · Data · AI
           </motion.p>
@@ -42,14 +43,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-6 max-w-2xl text-lg leading-relaxed"
           >
-            Más de 13 años de experiencia profesional evolucionando desde la
-            administración, las finanzas y el turismo hacia el análisis de datos
+            Más de 13 años de experiencia profesional, combinando una trayectoria en 
+            administración, finanzas y turismo con mi evolución hacia el análisis de datos 
             y la inteligencia artificial.
           </motion.p>
 
           {/* FINAL ANIMACIÓN DESCRIPCIÓN */}
-
-          {}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -57,19 +56,19 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="mt-8 flex gap-4"
           >
-            <button
-              type="button"
-              className="rounded border px-5 py-3 font-medium"
+            <Link
+              href="/#experience"
+              className="rounded border border-teal px-5 py-3 font-medium text-white transition-colors hover:bg-teal"
             >
               Ver mi evolución
-            </button>
+            </Link>
 
-            <button
-              type="button"
-              className="rounded border px-5 py-3 font-medium"
+            <Link
+              href="/#projects"
+              className="rounded border border-teal px-5 py-3 font-medium text-white transition-colors hover:bg-teal"
             >
               Explorar proyectos
-            </button>
+            </Link>
           </motion.div>
         </div>
       </Container>
