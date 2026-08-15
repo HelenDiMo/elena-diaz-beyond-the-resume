@@ -4,9 +4,12 @@ export default function Footer() {
   return (
     <footer className="border-t py-8">
       <Container>
-        <div className="flex items-center justify-between">
-          <p>© 2026 Elena Díaz</p>
-          <p>Beyond the Resume</p>
+        <div>
+          <p>
+            <span className="text-graphite font-bold">©</span>{" "}
+            <span className="text-oceanic font-bold">2026 Elena Díaz</span>
+          </p>
+          <p className="text-teal font-bold">Beyond the Resume</p>
         </div>
       </Container>
     </footer>

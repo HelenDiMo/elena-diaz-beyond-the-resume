@@ -9,30 +9,60 @@ export default function Header() {
       <Container>
         <div className="flex flex-col items-right gap-4 py-6 md:flex-row md:justify-between">
           <div>
-            <h1 className="text-xl font-bold">Elena Díaz</h1>
-            <p className="text-sm">Beyond the Resume</p>
+            <h1 className="text-oceanic">Elena Díaz</h1>
+            <p className="text-teal">Beyond the Resume</p>
           </div>
 
           <div className="flex items-center gap-6">
             <nav>
               <ul className="flex flex-wrap justify-left gap-4 md:gap-6">
                 <li>
-                  <Link href="/">Inicio</Link>
+                  <Link
+                    href="/"
+                    className="transition-colors hover:text-oceanic"
+                  >
+                    Inicio
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/#experience">Experiencia</Link>
+                  <Link
+                    href="/#experience"
+                    className="transition-colors hover:text-oceanic"
+                  >
+                    Experiencia
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/#skills"> Skills & Tools </Link>
+                  <Link
+                    href="/#skills"
+                    className="transition-colors hover:text-oceanic"
+                  >
+                    Skills & Tools
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/#projects">Proyectos</Link>
+                  <Link
+                    href="/#projects"
+                    className="transition-colors hover:text-oceanic"
+                  >
+                    Proyectos
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/#dashboard">Dashboard</Link>
+                  <Link
+                    href="/#dashboard"
+                    className="transition-colors hover:text-oceanic"
+                  >
+                    Dashboard
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/#contact">Contacto</Link>
+                  <Link
+                    href="/#contact"
+                    className="transition-colors hover:text-oceanic"
+                  >
+                    Contacto
+                  </Link>
                 </li>
               </ul>
             </nav>

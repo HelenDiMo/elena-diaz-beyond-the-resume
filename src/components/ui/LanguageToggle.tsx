@@ -15,7 +15,7 @@ export default function LanguageToggle() {
 	  <button 
         type="button" 
         onClick={toggleLanguage}
-        className="rounded border px-3 py-1 text-sm">
+        className="rounded border px-3 py-1 text-sm text-teal transition-colors hover:text-oceanic">
       {language}
      </button>
   );
