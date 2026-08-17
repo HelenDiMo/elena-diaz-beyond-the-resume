@@ -40,6 +40,10 @@ export const skills = {
         name: "Método Agile",
         logo: "/logos/agile-teal-007880.svg",
       },
+      {
+        name: "Marketing Digital",
+        logo: "/logos/marketing-teal-007880.svg"
+      },
     ],
   },
 

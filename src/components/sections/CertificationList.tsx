@@ -44,7 +44,7 @@ export default function CertificationList({
                       <img
                         src={certification.logo}
                         alt={`Logo de ${certification.issuer}`}
-                        className="mb-6 max-h-24 w-auto object-contain" /*Esto es lo de dentro del logo*/
+                        className="mb-6 max-h-26 w-auto object-contain" /*Esto es lo de dentro del logo*/
                       />
                     )}
 
