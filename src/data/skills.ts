@@ -36,6 +36,10 @@ export const skills = {
         name: "Visión de negocio",
         logo: "/logos/eye-teal-007880.svg",
       },
+            {
+        name: "Método Agile",
+        logo: "/logos/agile-teal-007880.svg",
+      },
     ],
   },
 
@@ -263,10 +267,6 @@ export const skills = {
       {
         name: "Formación y Mentoring",
         logo: "/logos/teach-teal-007880.svg",
-      },
-      {
-        name: "Método Agile",
-        logo: "/logos/agile-teal-007880.svg",
       },
       {
         name: "Documentación técnica y SOPs",

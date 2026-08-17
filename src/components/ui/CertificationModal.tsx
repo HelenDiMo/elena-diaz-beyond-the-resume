@@ -34,7 +34,7 @@ export default function CertificationModal({
           <Image
             src={certification.logo}
             alt={`Logo de ${certification.issuer}`}
-            width={120}
+            width={140}
             height={64}
             className="mb-6 max-h-22 w-auto object-contain"
           />
