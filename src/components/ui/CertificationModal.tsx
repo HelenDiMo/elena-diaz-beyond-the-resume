@@ -36,15 +36,15 @@ export default function CertificationModal({
             alt={`Logo de ${certification.issuer}`}
             width={120}
             height={64}
-            className="mb-6 max-h-16 w-auto object-contain"
+            className="mb-6 max-h-22 w-auto object-contain"
           />
         )}
 
-        <p className="text-sm uppercase tracking-wide">
+        {/* <p className="text-sm uppercase tracking-wide">
           {certification.category}
-        </p>
+        </p>*/} 
 
-        <h2 className="mt-2 text-2xl font-bold">{certification.title}</h2>
+        <h2 className="mt-2 text-2xl font-bold text-teal">{certification.title}</h2>
 
         <p className="mt-2">{certification.issuer}</p>
 
@@ -58,7 +58,7 @@ export default function CertificationModal({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Ver certificación de ${certification.title}`}
-            className="mt-6 inline-block font-medium underline underline-offset-4"
+            className="mt-6 inline-block font-medium underline underline-offset-4 transition-colors hover:text-oceanic"
           >
             Ver certificación ↗
           </a>

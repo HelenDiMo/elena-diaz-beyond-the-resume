@@ -30,7 +30,7 @@ export default function CertificationList({
             <section key={category}>
               <h2 className="text-2xl font-bold text-teal">{category}</h2>{" "}
               {/* La categoria */}
-              <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {" "}
                 {/* Cambia la tarjeta entera */}
                 {categoryCertifications.map((certification) => (
@@ -44,7 +44,7 @@ export default function CertificationList({
                       <img
                         src={certification.logo}
                         alt={`Logo de ${certification.issuer}`}
-                        className="mb-6 max-h-16 w-auto object-contain" /*Esto es lo de dentro del logo*/
+                        className="mb-6 max-h-22 w-auto object-contain" /*Esto es lo de dentro del logo*/
                       />
                     )}
 

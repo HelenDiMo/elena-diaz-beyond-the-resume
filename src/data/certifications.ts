@@ -3,13 +3,13 @@ import type { Certification } from "@/types/certification";
 export const certifications: Certification[] = [
   {
     id: "ibm-python",
-    title: "Python",
-    issuer: "IBM",
-    category: "Programación",
+    title: " Python Avanzado Orientado al Desarrollo Backend (86 h)",
+    issuer: "IBM & BeJob",
+    category: "Programación & Data",
     date: "2026",
-    description: "Certificación relacionada con programación en Python.",
-    credentialUrl: null,
-    logo: "/certifications/ibm.png",
+    description: "Formación avanzada en Python y desarrollo backend, incluyendo POO, bases de datos, APIs con FastAPI, persistencia de datos, arquitectura backend y testing automatizado con pytest.",
+    credentialUrl: "/certifications/diploma/ibm_python_avanzado.pdf",
+    logo: "/certifications/logos/ibm-bejob.svg",
   },
   {
     id: "power-bi",
