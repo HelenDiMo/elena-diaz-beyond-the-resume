@@ -7,7 +7,7 @@ export default function CertificationsPage() {
     <main>
       <section className="py-24">
         <Container>
-          <div className="max-w-3xl">
+          <div>
             <p className="text-sm font-medium uppercase tracking-[0.3em0] text-teal">
               Formación
             </p>

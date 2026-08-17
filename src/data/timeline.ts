@@ -88,7 +88,7 @@ export const timeline = [
     roles: [
       {
         period: "2020 – 2026",
-        title: "Accounts Payable · Administrativa Contable · Administrativa Oficial de 1ª",
+        title: "Accounts Payable · Administrativa Oficial de 1ª",
       },
     ],
     description:
