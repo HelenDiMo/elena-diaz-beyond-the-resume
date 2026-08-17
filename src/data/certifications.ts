@@ -40,17 +40,19 @@ export const certifications: Certification[] = [
     issuer: "BIG SCHOOL",
     category: "AI / Inteligencia Artificial",
     date: "2025",
-    description: "Formación sobre el ecosistema de IA Workflow, integrando la inteligencia artificial en el sistema de producción profesional, automatizando procesos y maximizando la productividad diaria.",
+    description:
+      "Formación sobre el ecosistema de IA Workflow, integrando la inteligencia artificial en el sistema de producción profesional, automatizando procesos y maximizando la productividad diaria.",
     credentialUrl: "/certifications/diploma/big-school-ia-workflow.pdf",
     logo: "/certifications/logos/bigschool.svg",
-  },    
+  },
   {
     id: "ai",
     title: "Introducción a la Inteligencia Artiﬁcial (80 h.)",
     issuer: "Somos F5",
     category: "AI / Inteligencia Artificial",
     date: "2026",
-    description:"Formación introductoria sobre programación en Python, lógica, matemáticas básicas y ciencia de datos",
+    description:
+      "Formación introductoria sobre programación en Python, lógica, matemáticas básicas y ciencia de datos",
     credentialUrl: "certifications/diploma/somos-f5-intro-ia.pdf",
     logo: "/certifications/logos/somos-f5.png",
   },
@@ -67,12 +69,35 @@ export const certifications: Certification[] = [
     logo: "/certifications/logos/laborus.png",
   },
   {
+    id: "mkt-digital",
+    title: "Fundamentos de Marketing Digital (40 h.)",
+    issuer: "Google",
+    category: "Gestión y Operaciones",
+    date: "2018",
+    description:
+      "Formación sobre fundamentos e introduccion al Marketing Digital",
+    credentialUrl: "/certifications/diploma/google-mkt-digital.pdf",
+    logo: "/certifications/logos/google.svg",
+  },
+  {
+    id: "revenue-management",
+    title: "Revenue Management Profesional (3 h.)",
+    issuer: "BIG SCHOOL",
+    category: "Gestión y Operaciones",
+    date: "2020",
+    description:
+      "Formación de refuerzo sobre técnicas y fundamentos de Revenue Management hotelero.",
+    credentialUrl: "/certifications/diploma/hotelsdot-revenue-mng.pdf",
+    logo: "/certifications/logos/hoteldots-ith-instituto.png",
+  },
+  {
     id: "sage-accountant",
     title: "Curso Superior enSage 50C Contabilidad (200 h.)",
     issuer: "INESEM BUSINESS SCHOOL",
     category: "Gestión y Operaciones",
     date: "2025",
-    description: "Formación sobre manejo de software Sage 50 para el área Contable.",
+    description:
+      "Formación sobre manejo de software Sage 50 para el área Contable.",
     credentialUrl: "/certifications/diploma/inesem-sage-nodni.pdf",
     logo: "/certifications/logos/inesem.svg",
   },
@@ -87,15 +112,14 @@ export const certifications: Certification[] = [
     logo: "/certifications/logos/sepe-skillsoft.svg",
   },
   {
-    id: "marketing-digital",
+    id: "mkt-digital",
     title: "Marketing Digital con IA (6 h.)",
     issuer: "BIG SCHOOL",
     category: "AI / Inteligencia Artificial",
     date: "2026",
-    description: "Formación de Marketing Digital integrando IA para creación de propuestas de valor, captación y automatización mediante SEO, SEM, el diseño de landing pages y sistemas de Lead Magnets",
+    description:
+      "Formación de Marketing Digital integrando IA para creación de propuestas de valor, captación y automatización mediante SEO, SEM, el diseño de landing pages y sistemas de Lead Magnets",
     credentialUrl: "/certifications/diploma/big-school-mkt-digital-ia.pdf",
     logo: "/certifications/logos/bigschool.svg",
   },
-  
-
 ];
