@@ -53,6 +53,10 @@ export const skills = {
         logo: "/logos/database-teal-007880.svg",
       },
       {
+        name: "MySQL",
+        logo: "/logos/mysql-teal-007880.svg",
+      },
+      {
         name: "Pandas",
         logo: "/logos/pandas-teal-007880.svg",
       },
@@ -203,6 +207,18 @@ export const skills = {
       {
         name: "HTML",
         logo: "/logos/html-teal-007880.svg",
+      },
+      {
+        name: "OOP / POO",
+        logo: "/logos/opp-teal-007880.svg",
+      },
+      {
+        name: "FastAPI",
+        logo: "/logos/fastapi-teal-007880.svg",
+      },
+      {
+        name: "PyTest",
+        logo: "/logos/pytest-teal-007880.svg",
       },
     ],
   },

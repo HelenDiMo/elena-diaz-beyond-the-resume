@@ -7,7 +7,8 @@ export const certifications: Certification[] = [
     issuer: "IBM & BeJob",
     category: "Programación & Data",
     date: "2026",
-    description: "Formación avanzada en Python y desarrollo backend, incluyendo POO, bases de datos, APIs con FastAPI, persistencia de datos, arquitectura backend y testing automatizado con pytest.",
+    description:
+      "Formación avanzada en Python y desarrollo backend, incluyendo POO, bases de datos, APIs con FastAPI, persistencia de datos, arquitectura backend y testing automatizado con pytest.",
     credentialUrl: "/certifications/diploma/ibm_python_avanzado.pdf",
     logo: "/certifications/logos/ibm-bejob.svg",
   },
@@ -19,8 +20,8 @@ export const certifications: Certification[] = [
     date: "2026",
     description:
       "Formación especializada en análisis y visualización de datos con Power BI.",
-    credentialUrl: null,
-    logo: "/certifications/andalucia.png",
+    credentialUrl: "/certifications/diploma/andalucia_vuela_power_bi.pdf",
+    logo: "/certifications/logos/andalucia-vuela-blanco.svg",
   },
   {
     id: "introduction-ai",
