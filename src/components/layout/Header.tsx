@@ -40,7 +40,7 @@ export default function Header() {
                     href="/#skills"
                     className="transition-colors hover:text-oceanic"
                   >
-                    Skills & Tools
+                    Habilidades & Herramientas
                   </Link>
                 </li>
                 <li>

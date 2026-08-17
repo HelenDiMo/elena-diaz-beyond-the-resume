@@ -2,25 +2,52 @@ import Container from "@/components/ui/Container";
 import { skills } from "@/data/skills";
 import Certifications from "@/components/sections/Certifications";
 
+type SkillItem = {
+  name: string;
+  logo?: string;
+};
+
 type SkillCardProps = {
   title: string;
   description: string;
-  items: string[];
+  items: string[] | SkillItem[];
 };
 
 function SkillCard({ title, description, items }: SkillCardProps) {
   return (
-    <div className="rounded-xl border p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
+    <div className="rounded-xl border border-teal p-6 transition-colors hover:border-oceanic">
+      <h3 className="text-xl font-semibold text-oceanic">{title}</h3>
 
-      <p className="mt-4 leading-relaxed">{description}</p>
+      <p className="mt-4 leading-relaxed text-white">{description}</p>
 
-      <ul className="mt-6 flex flex-wrap gap-2">
-        {items.map((item) => (
-          <li key={item} className="rounded-full border px-3 py-1 text-sm">
-            {item}
-          </li>
-        ))}
+      <ul className="mt-6 flex flex-wrap gap-3">
+        {items.map((item) => {
+          if (typeof item === "string") {
+            return (
+              <li key={item} className="rounded-full border px-3 py-1 text-sm">
+                {item}
+              </li>
+            );
+          }
+
+          return (
+            <li
+              key={item.name}
+              className="flex items-center gap-2 rounded-full border px-3 py-1 text-sm"
+            >
+              {item.logo && (
+                <img
+                  src={item.logo}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-5 w-5 object-contain"
+                />
+              )}
+
+              <span>{item.name}</span>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
@@ -31,11 +58,11 @@ export default function Skills() {
     <section id="skills" className="py-24">
       <Container>
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
-            Skills & Ecosystem
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-teal">
+            Habilidades & Herramientas
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl text-oceanic">
             Un perfil 360º
           </h2>
 

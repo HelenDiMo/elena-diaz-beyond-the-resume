@@ -53,7 +53,7 @@ export const timeline = [
   },
   {
     year: "2015 – 2018",
-    company: "BLOC Hotels",
+    company: "BLOC Hotel Gatwick Airport · BLOC Hotel Birmingham",
     location: "Aeropuerto de Gatwick · Birmingham, Reino Unido",
     roles: [
       {
@@ -83,7 +83,7 @@ export const timeline = [
   },
   {
     year: "2020 – 2026",
-    company: "Edhinor",
+    company: "Edhinor, S.A.",
     location: "Madrid",
     roles: [
       {
