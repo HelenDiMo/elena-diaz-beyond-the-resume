@@ -5,7 +5,7 @@ export const certifications: Certification[] = [
     id: "ibm-python",
     title: "Python",
     issuer: "IBM",
-    category: "Programming",
+    category: "Programación",
     date: "2026",
     description: "Certificación relacionada con programación en Python.",
     credentialUrl: null,

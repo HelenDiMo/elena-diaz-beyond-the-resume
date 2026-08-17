@@ -15,7 +15,7 @@ export default function CertificationList({
     useState<Certification | null>(null);
 
   const categories = Array.from(
-    new Set(certifications.map((certification) => certification.category)),
+    new Set(certifications.map((certification) => certification.category))
   );
 
   return (
@@ -23,38 +23,38 @@ export default function CertificationList({
       <div className="mt-16 space-y-16">
         {categories.map((category) => {
           const categoryCertifications = certifications.filter(
-            (certification) => certification.category === category,
+            (certification) => certification.category === category
           );
 
           return (
             <section key={category}>
-              <h2 className="text-2xl font-bold">{category}</h2>
-
+              <h2 className="text-2xl font-bold text-teal">{category}</h2>{" "}
+              {/* La categoria */}
               <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {" "}
+                {/* Cambia la tarjeta entera */}
                 {categoryCertifications.map((certification) => (
                   <button
                     key={certification.id}
                     type="button"
                     onClick={() => setSelectedCertification(certification)}
-                    className="rounded-xl border p-6 text-left transition hover:-translate-y-1"
+                    className="rounded-xl border border-teal p-6 text-left transition hover:-translate-y-1"
                   >
                     {certification.logo && (
                       <img
                         src={certification.logo}
                         alt={`Logo de ${certification.issuer}`}
-                        className="mb-6 max-h-16 w-auto object-contain"
+                        className="mb-6 max-h-16 w-auto object-contain" /*Esto es lo de dentro del logo*/
                       />
                     )}
 
-                    <h3 className="text-xl font-semibold">
+                    <h3 className="text-xl font-semibold text-oceanic">
                       {certification.title}
                     </h3>
 
                     <p className="mt-2">{certification.issuer}</p>
 
-                    <p className="mt-1 text-sm">
-                      {certification.date}
-                    </p>
+                    <p className="mt-1 text-sm">{certification.date}</p>
 
                     <p className="mt-4 text-sm font-medium underline underline-offset-4">
                       Ver detalles →

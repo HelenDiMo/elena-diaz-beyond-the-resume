@@ -8,11 +8,11 @@ export default function CertificationsPage() {
       <section className="py-24">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+            <p className="text-sm font-medium uppercase tracking-[0.3em0] text-teal">
               Formación
             </p>
 
-            <h1 className="mt-4 text-4xl font-bold md:text-5xl">
+            <h1 className="mt-4 text-4xl font-bold md:text-5xl text-shadow- text-oceanic">
               Certificaciones y aprendizaje
             </h1>
 

@@ -1,7 +1,9 @@
 export default function Certifications() {
   return (
     <div className="mt-16 border-t pt-10">
-      <h3 className="text-2xl font-bold">Formación y certificaciones</h3>
+      <h3 className="text-2xl font-bold text-teal">
+        Formación y certificaciones
+      </h3>
 
       <p className="mt-4 max-w-2xl leading-relaxed">
         Formación continua y certificaciones que respaldan mi evolución
@@ -10,7 +12,7 @@ export default function Certifications() {
 
       <a
         href="/certifications"
-        className="mt-6 inline-block font-medium underline underline-offset-4"
+        className="mt-6 inline-block font-medium underline underline-offset-4 transition-colors hover:text-oceanic"
       >
         Ver formación y certificaciones →
       </a>
