@@ -5,6 +5,18 @@ export const skills = {
       "Experiencia profesional en administración, finanzas, contabilidad, operaciones y gestión de procesos de negocio.",
     items: [
       {
+        name: "Dynamics Business Central",
+        logo: "/logos/microsoft-teal-007880.svg",
+      },
+      {
+        name: "Navision / Dynamics NAV",
+        logo: "/logos/navision-teal-007880.svg",
+      },
+      {
+        name: "Sage 50 / ContaPlus",
+        logo: "/logos/s-teal-007880.svg",
+      },
+      {
         name: "Administración",
         logo: "/logos/administrator-teal-007880.svg",
       },
@@ -50,7 +62,7 @@ export const skills = {
       },
       {
         name: "Matplotlib",
-        logo: "/logos/matplotlib-teal-007880-2.svg",
+        logo: "/logos/matplotlib-teal-007880.svg",
       },
       {
         name: "Seaborn",
@@ -129,37 +141,68 @@ export const skills = {
       "Ecosistema de herramientas utilizadas para desarrollar, analizar, visualizar, documentar y desplegar proyectos.",
     items: [
       {
+        name: "Micrsoft Office",
+        logo: "/logos/microsoft-office-teal-007880.svg",
+      },
+      {
         name: "Git",
+        logo: "/logos/git-teal-007880.svg",
       },
       {
         name: "GitHub",
+        logo: "/logos/github-teal-007880.svg",
       },
       {
         name: "VS Code",
-      },
-      {
-        name: "Power BI",
+        logo: "/logos/vscode-teal-007880.svg",
       },
       {
         name: "Streamlit",
-      },
-      {
-        name: "Flask",
+        logo: "/logos/streamlit-teal-007880.svg",
       },
       {
         name: "Docker",
+        logo: "/logos/docker-teal-007880.svg",
       },
       {
         name: "Google Colab",
+        logo: "/logos/googlecolab-teal-007880.svg",
       },
       {
-        name: "Terminal",
-      },
-      {
-        name: "WSL2",
+        name: "WSL2 / Ubuntu",
+        logo: "/logos/ubuntu-teal-007880.svg",
       },
       {
         name: "Notion",
+        logo: "/logos/notion-teal-007880.svg",
+      },
+      {
+        name: "Next.js",
+        logo: "/logos/next-teal-007880.svg",
+      },
+      {
+        name: "React",
+        logo: "/logos/react-teal-007880.svg",
+      },
+      {
+        name: "TypeScript",
+        logo: "/logos/ts-teal-007880.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        logo: "/logos/tailwind-css-teal-007880.svg",
+      },
+      {
+        name: "Framer Motion / Motion",
+        logo: "/logos/framer-teal-007880.svg",
+      },
+      {
+        name: "CSS",
+        logo: "/logos/css-teal-007880.svg",
+      },
+      {
+        name: "HTML",
+        logo: "/logos/html-teal-007880.svg",
       },
     ],
   },
@@ -171,36 +214,47 @@ export const skills = {
     items: [
       {
         name: "Adaptabilidad",
+        logo: "/logos/adapt-teal-007880-3.svg",
       },
       {
         name: "Aprendizaje continuo",
+        logo: "/logos/learning-brain-teal-007880-2.svg",
       },
       {
         name: "Organización",
-      },
-      {
-        name: "Pensamiento analítico",
-      },
-      {
-        name: "Pensamiento crítico",
+        logo: "/logos/organizacion-teal-007880.svg",
       },
       {
         name: "Comunicación",
-      },
-      {
-        name: "Gestión de prioridades",
+        logo: "/logos/communication-teal-007880.svg",
       },
       {
         name: "Atención al detalle",
+        logo: "/logos/attention-detail-teal-007880.svg",
       },
       {
         name: "Resolución de problemas",
+        logo: "/logos/troubleshoot-teal-007880.svg",
       },
       {
         name: "Trabajo en equipo",
+        logo: "/logos/team-teal-007880.svg",
       },
       {
         name: "Liderazgo",
+        logo: "/logos/lead-teal-007880.svg",
+      },
+      {
+        name: "Formación y Mentoring",
+        logo: "/logos/teach-teal-007880.svg",
+      },
+      {
+        name: "Método Agile",
+        logo: "/logos/agile-teal-007880.svg",
+      },
+      {
+        name: "Documentación técnica y SOPs",
+        logo: "/logos/sops-teal-007880.svg",
       },
     ],
   },
