@@ -56,15 +56,18 @@ function CertificationCard({
           </div>
 
           <div className="mt-6">
-            <p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
-              {certification.category}
-            </p>
 
-            <p className="mt-2 text-sm text-white/60">{certification.date}</p>
+             {/*<p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
+              {certification.category}
+            </p>   --> SI QUIERO AÑADIR LA CATEGORIA AL FRONT DE LA TARJETA */}
+
+            
 
             <h4 className="mt-3 min-h-14 text-lg font-semibold leading-snug text-white">
               {certification.title}
             </h4>
+
+            <p className="mt-2 text-sm text-white/60">{certification.date}</p>
 
             <p className="mt-3 text-sm text-teal">{certification.issuer}</p>
           </div>
@@ -82,9 +85,9 @@ function CertificationCard({
             transform: "rotateY(180deg)",
           }}
         >
-          <p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
+          {/*<p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
             {certification.category}
-          </p>
+          </p> --> SI QUIERO AÑADIR LA CATEGORÍA A LA PARTE DE DETRÁS*/}
 
           <h4 className="mt-4 text-xl font-semibold leading-snug text-white">
             {certification.title}
@@ -199,14 +202,14 @@ export default function CertificationList({
   return (
     <div className="mt-16 border-t border-white/10 pt-10">
       <CertificationCarousel
-        title="AI / Inteligencia Artificial"
-        category="AI / Inteligencia Artificial"
+        title="Programación & Data"
+        category="Programación & Data"
         certifications={certifications}
       />
 
       <CertificationCarousel
-        title="Programación & Data"
-        category="Programación & Data"
+        title="AI / Inteligencia Artificial"
+        category="AI / Inteligencia Artificial"
         certifications={certifications}
       />
 

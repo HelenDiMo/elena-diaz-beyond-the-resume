@@ -41,9 +41,23 @@ function EducationCard({
 export default function Certifications() {
   return (
     <div className="mt-16 border-t pt-10">
-      <h3 className="text-2xl font-bold text-teal">Formación Académica</h3>
+      <h3 className="text-2xl font-bold text-teal">Formación Principal</h3>
 
       <div className="mt-8 flex flex-wrap gap-6">
+        <EducationCard
+          logo=""
+          title="Bootcamp IA & Data (1250 h.)"
+          institution="Somos F5 · Fundación Tomillo"
+          year="Cursando"
+        />
+
+        <EducationCard
+          logo=""
+          title="Curso Universitario de Especialización en Asesoría de Empresas: Fiscal, Laboral y Contable (6 meses)"
+          institution="Escuela de Negocios y Dirección - ENyD"
+          year="2021"
+        />
+
         <EducationCard
           logo="/certifications/logos/uca.png"
           title="Doble Diplomatura en Turismo y Ciencias Empresariales"
