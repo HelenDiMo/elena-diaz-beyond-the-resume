@@ -120,7 +120,7 @@ export const certifications: Certification[] = [
       "/certifications/diploma/uni-nebrija-contratos-nominas-ss.pdf",
     logo: "/certifications/logos/uni-nebrija.webp",
   },
-    {
+  {
     id: "revenue-management",
     title: "Revenue Management Profesional (3 h.)",
     issuer:
@@ -132,7 +132,7 @@ export const certifications: Certification[] = [
     credentialUrl: "/certifications/diploma/hotelsdot-revenue-mng.pdf",
     logo: "/certifications/logos/hoteldots-ith-instituto.png",
   },
-    {
+  {
     id: "logistica-bar",
     title:
       "Logística en Bar: Aprovisionamiento y Almacenaje de Alimentos y Bebidas (35 h.)",
@@ -144,7 +144,7 @@ export const certifications: Certification[] = [
     credentialUrl: "/certifications/diploma/euroformac-logistica-bar.pdf",
     logo: "/certifications/logos/sepe-euroformac.svg",
   },
-    {
+  {
     id: "adobe-canva",
     title:
       "Adobe Spark y Canva: Creación de Publicaciones para RRSS y Webs (30 h.)",
@@ -157,16 +157,15 @@ export const certifications: Certification[] = [
       "/certifications/diploma/andalucia-com-digital-adobe-canva.pdf",
     logo: "/certifications/logos/consorcio-fernando-rios.png",
   },
-    {
+  {
     id: "prezi-genially",
     title: "Presentaciones Profesionales con Prezi y Genially (20 h.)",
     issuer: "Andalucía Compromiso Digital · Euroformac",
     category: "Gestión y Operaciones",
     date: "2020",
     description:
-      "Formación sobre creación de contenidos con las herramientas Prezi y Genially.",
-    credentialUrl:
-      "/certifications/diploma/andalucia-comp-prezi.pdf",
+      "Formación sobre creación y desarrollo de contenido con las herramientas Prezi y Genially.",
+    credentialUrl: "/certifications/diploma/andalucia-comp-prezi.pdf",
     logo: "/certifications/logos/acd-euroformac.svg",
   },
   {
@@ -181,6 +180,31 @@ export const certifications: Certification[] = [
       "/certifications/diploma/andalucia-comp-digital-admin-nube.pdf",
     logo: "/certifications/logos/acd-euroformac.svg",
   },
+  {
+    id: "cm-medio",
+    title: "Community Manager - Nivel Medio (25 h.)",
+    issuer: "Andalucía Compromiso Digital · Euroformac",
+    category: "Gestión y Operaciones",
+    date: "2020",
+    description:
+      "Formación sobre la figura del CM, habilidades sociales y herramientas.",
+    credentialUrl:
+      "/certifications/diploma/andalucia-comp-digital-cm-medio.pdf",
+    logo: "/certifications/logos/acd-euroformac.svg",
+  },
+  {
+    id: "cm-avanzado",
+    title: "Community Manager - Nivel Avanzado (30 h.)",
+    issuer: "Andalucía Compromiso Digital · Euroformac",
+    category: "Gestión y Operaciones",
+    date: "2020",
+    description:
+      "Formación sobre RRSS, herramientas, papel del CM, fidelización y creación de contenidos.",
+    credentialUrl:
+      "/certifications/diploma/andalucia-comp-digital-cm-medio.pdf",
+    logo: "/certifications/logos/acd-euroformac.svg",
+  },
+
   {
     id: "mkt-digital-inicio",
     title: "Fundamentos de Marketing Digital (40 h.)",
