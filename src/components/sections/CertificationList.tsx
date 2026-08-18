@@ -1,28 +1,41 @@
 "use client";
 
 import { useRef } from "react";
+import { useState } from "react";
 import { certifications } from "@/data/certifications";
 import type { Certification } from "@/types/certification";
+import CertificationModal from "@/components/ui/CertificationModal";
 
 function CertificationCard({
   certification,
+  onSelect,
 }: {
   certification: Certification;
+  onSelect: (certification: Certification) => void;
 }) {
   return (
-    <article className="group flex min-w-75 max-w-75 shrink-0 flex-col rounded-xl border border-teal/40 bg-graphite p-6 transition-all duration-300 hover:-translate-y-1 hover:border-oceanic">
+    <article
+      role="button"
+      tabIndex={0}
+      onClick={() => onSelect(certification)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          onSelect(certification);
+        }
+      }}
+      className="group flex min-w-75 max-w-75 shrink-0 cursor-pointer flex-col rounded-xl border border-teal/40 bg-graphite p-6 transition-all duration-300 hover:-translate-y-1 hover:border-oceanic"
+    >
       <div className="flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5">
         {certification.logo ? (
           <img
             src={certification.logo}
             alt={`Logo de ${certification.issuer}`}
-            className="max-h-14 max-w-40 object-contain transition-transform duration-300 group-hover:scale-105"
+            className="max-h-14 max-w-40 object-contain transition-transform duration-300 group-hover:scale-140"
           />
         ) : (
           <span className="text-sm text-white/50">Sin logo</span>
         )}
       </div>
-
       <div className="mt-6">
         <p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
           {certification.category}
@@ -36,23 +49,6 @@ function CertificationCard({
 
         <p className="mt-3 text-sm text-teal">{certification.issuer}</p>
       </div>
-
-      <div className="mt-auto pt-6">
-        {certification.credentialUrl && (
-          <a
-            href={certification.credentialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Ver credencial de ${certification.title}`}
-            className="inline-flex items-center font-medium text-oceanic transition-colors hover:text-white"
-          >
-            Ver credencial
-            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </a>
-        )}
-      </div>
     </article>
   );
 }
@@ -60,9 +56,11 @@ function CertificationCard({
 function CertificationCarousel({
   title,
   category,
+  onSelect,
 }: {
   title: string;
   category: string;
+  onSelect: (certification: Certification) => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -113,12 +111,13 @@ function CertificationCarousel({
 
       <div
         ref={containerRef}
-        className="mt-8 flex gap-6 overflow-x-auto scroll-smooth px-1 py-2"
+        className="hide-scrollbar mt-8 flex gap-6 overflow-x-auto scroll-smooth px-1 py-2"
       >
         {filteredCertifications.map((certification) => (
           <CertificationCard
             key={certification.id}
             certification={certification}
+            onSelect={onSelect}
           />
         ))}
       </div>
@@ -127,22 +126,33 @@ function CertificationCarousel({
 }
 
 export default function Certifications() {
+  const [selectedCertification, setSelectedCertification] =
+    useState<Certification | null>(null);
   return (
     <div className="mt-16 border-t pt-10">
       <CertificationCarousel
         title="AI / Inteligencia Artificial"
         category="AI / Inteligencia Artificial"
+        onSelect={setSelectedCertification}
       />
 
       <CertificationCarousel
         title="Programación & Data"
         category="Programación & Data"
+        onSelect={setSelectedCertification}
       />
 
       <CertificationCarousel
         title="Gestión y Operaciones"
         category="Gestión y Operaciones"
+        onSelect={setSelectedCertification}
       />
+      {selectedCertification && (
+        <CertificationModal
+          certification={selectedCertification}
+          onClose={() => setSelectedCertification(null)}
+        />
+      )}
     </div>
   );
 }
