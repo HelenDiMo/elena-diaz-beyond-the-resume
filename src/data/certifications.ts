@@ -19,7 +19,7 @@ export const certifications: Certification[] = [
     category: "Programación & Data",
     date: "2026",
     description:
-      "Formación avanzada en Python y desarrollo backend, incluyendo POO, bases de datos, FastAPI, persistencia de datos, arquitectura backend y testing con pytest.",
+      "Formación avanzada en Python y desarrollo backend, incluyendo POO, bases de datos, FastAPI, arquitectura backend y testing con pytest.",
     credentialUrl: "/certifications/diploma/ibm_python_avanzado.pdf",
     logo: "/certifications/logos/ibm-bejob.svg",
   },
