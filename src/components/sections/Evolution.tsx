@@ -31,9 +31,9 @@ export default function Evolution() {
             competencias tecnológicas para analizar problemas desde diferentes
             perspectivas y construir soluciones con una visión global.
           </p>
-
-          <Timeline />
         </div>
+
+        <Timeline />
       </Container>
     </section>
   );

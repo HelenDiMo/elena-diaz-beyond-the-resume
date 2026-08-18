@@ -1,97 +1,159 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { timeline } from "@/data/timeline";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Timeline() {
+  const displayedTimeline = [...timeline].reverse();
+
   const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<Array<HTMLButtonElement | null>>([]);
+
+  const activeItem = displayedTimeline[activeIndex];
+
+  const scroll = (direction: "left" | "right") => {
+    if (!containerRef.current) return;
+
+    containerRef.current.scrollBy({
+      left: direction === "right" ? 260 : -260,
+      behavior: "smooth",
+    });
+  };
+
+  const handleSelect = (index: number) => {
+    setActiveIndex(index);
+
+    itemRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  };
 
   return (
-    <div className="mt-16">
-      <div className="relative">
-        {/* Línea vertical */}
-        <div className="absolute left-3 top-0 h-full w-px bg-teal" />
+    <div className="mt-16 w-full">
+      <div className="flex items-center justify-between gap-4">
+        <h3 className="text-2xl font-bold text-teal">
+          Trayectoria profesional
+        </h3>
 
-        <div className="space-y-10">
-          {timeline.map((item, index) => (
-            <motion.div
-              key={item.year + item.company}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative pl-10"
-            >
-              {/* Punto interactivo */}
-              <motion.button
-                type="button"
-                onClick={() => setActiveIndex(index)}
-                whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.95 }}
-                animate={{
-                  scale: activeIndex === index ? 1.2 : 1,
-                }}
-                transition={{ duration: 0.2 }}
-                className={`absolute left-0 top-1 h-6 w-6 rounded-full border-2 ${
-                  activeIndex === index
-                    ? "border-oceanic bg-oceanic"
-                    : "border-teal bg-graphite"
-                }`}
-                aria-label={`Ver ${item.company}`}
-              />
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => scroll("left")}
+            aria-label="Ver etapas anteriores"
+            className="rounded border px-3 py-1 transition-colors hover:border-oceanic hover:text-oceanic"
+          >
+            ←
+          </button>
 
-              <div>
-                {/* Fecha */}
-                <p className="text-sm font-medium text-oceanic">
-                  {item.year}
-                </p>
-
-                {/* Empresa */}
-                <h3 className="mt-1 text-xl font-semibold text-white">
-                  {item.company}
-                </h3>
-
-                {/* Ubicación */}
-                <p className="mt-1 text-sm text-teal">{item.location}</p>
-
-                <AnimatePresence mode="wait">
-                  {activeIndex === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0, y: -10 }}
-                      animate={{ opacity: 1, height: "auto", y: 0 }}
-                      exit={{ opacity: 0, height: 0, y: -10 }}
-                      transition={{ duration: 0.3 }}
-                      className="mt-4 max-w-2xl overflow-hidden"
-                    >
-                      {/* Puestos */}
-                      <div className="space-y-2">
-                        {item.roles.map((role) => (
-                          <div key={role.period + role.title}>
-                            {item.roles.length > 1 && (
-                              <p className="text-sm text-teal">
-                                {role.period}
-                              </p>
-                            )}
-                            <p className="font-medium text-oceanic">
-                              {role.title}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Descripción */}
-                      <p className="mt-4 leading-relaxed text-white">
-                        {item.description}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </motion.div>
-          ))}
+          <button
+            type="button"
+            onClick={() => scroll("right")}
+            aria-label="Ver etapas siguientes"
+            className="rounded border px-3 py-1 transition-colors hover:border-oceanic hover:text-oceanic"
+          >
+            →
+          </button>
         </div>
       </div>
+
+      {/* Riel horizontal */}
+      <div
+        ref={containerRef}
+        className="hide-scrollbar mt-10 overflow-x-auto overflow-y-hidden scroll-smooth"
+      >
+        <div className="relative flex min-w-max items-start">
+          {/* Línea horizontal */}
+          <div className="absolute left-0 right-0 top-8 h-px bg-teal" />
+
+          {displayedTimeline.map((item, index) => {
+            const isActive = activeIndex === index;
+
+            return (
+              <button
+                key={item.year + item.company}
+                type="button"
+                ref={(el) => {
+                  itemRefs.current[index] = el;
+                }}
+                onClick={() => handleSelect(index)}
+                aria-label={`Ver ${item.company}`}
+                aria-pressed={isActive}
+                className="flex min-w-35 flex-1 flex-col items-center gap-2 px-2 text-center"
+              >
+                <span
+                  className={`text-xs font-medium transition-colors ${
+                    isActive ? "text-oceanic" : "text-teal"
+                  }`}
+                >
+                  {item.year}
+                </span>
+
+                <motion.span
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
+                  animate={{ scale: isActive ? 1.3 : 1 }}
+                  transition={{ duration: 0.2 }}
+                  className={`z-10 h-4 w-4 rounded-full border-2 ${
+                    isActive
+                      ? "border-oceanic bg-oceanic"
+                      : "border-teal bg-graphite"
+                  }`}
+                />
+
+                <span
+                  className={`text-sm font-semibold leading-snug transition-colors ${
+                    isActive ? "text-white" : "text-white/50"
+                  }`}
+                >
+                  {item.company}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Panel de detalle */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeItem.year + activeItem.company}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+          className="mx-auto mt-8 max-w-2xl rounded-xl border border-teal/40 bg-graphite p-6 md:p-8"
+        >
+          <p className="text-sm font-medium text-oceanic">
+            {activeItem.year}
+          </p>
+
+          <h4 className="mt-1 text-xl font-semibold text-white">
+            {activeItem.company}
+          </h4>
+
+          <p className="mt-1 text-sm text-teal">{activeItem.location}</p>
+
+          <div className="mt-4 space-y-2">
+            {activeItem.roles.map((role) => (
+              <div key={role.period + role.title}>
+                {activeItem.roles.length > 1 && (
+                  <p className="text-sm text-teal">{role.period}</p>
+                )}
+
+                <p className="font-medium text-oceanic">{role.title}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-4 leading-relaxed text-white/80">
+            {activeItem.description}
+          </p>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
