@@ -120,19 +120,6 @@ export const certifications: Certification[] = [
       "/certifications/diploma/uni-nebrija-contratos-nominas-ss.pdf",
     logo: "/certifications/logos/uni-nebrija.webp",
   },
-    {
-    id: "asesoria",
-    title: "Curso Universitario de Especialización en Asesoría de Empresas: Fiscal, Laboral y Contable (6 meses)",
-    issuer: "Escuela de Negocios y Dirección - ENyD",
-    category: "Gestión y Operaciones",
-    date: "2025",
-    description:
-      "Formación especializada en asesoría empresarial en los ",
-    credentialUrl:
-      "/certifications/diploma/uni-nebrija-contratos-nominas-ss.pdf",
-    logo: "/certifications/logos/uni-nebrija.webp",
-  },
-
   {
     id: "equipo-nube",
     title: "Admón. de Equipos Informáticos y Ofimática en la Nube (30 h.)",

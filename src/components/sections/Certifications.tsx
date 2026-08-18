@@ -10,7 +10,7 @@ function EducationCard({
   year: string;
 }) {
   return (
-    <div className="flex min-w-75 max-w-75 shrink-0 flex-col rounded-xl border border-teal/40 bg-graphite p-6">
+    <div className="flex flex-col rounded-xl border border-teal/40 bg-graphite p-6">
       <div className="flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5">
         {logo ? (
           <img
@@ -37,22 +37,21 @@ function EducationCard({
     </div>
   );
 }
-
 export default function Certifications() {
   return (
     <div className="mt-16 border-t pt-10">
       <h3 className="text-2xl font-bold text-teal">Formación Principal</h3>
 
-      <div className="mt-8 flex flex-wrap gap-6">
+      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         <EducationCard
-          logo=""
-          title="Bootcamp IA & Data (1250 h.)"
+          logo="/certifications/logos/somos-f5.png"
+          title="Bootcamp IA & Data (1250 h)"
           institution="Somos F5 · Fundación Tomillo"
           year="Cursando"
         />
 
         <EducationCard
-          logo=""
+          logo="/certifications/logos/edyn.png"
           title="Curso Universitario de Especialización en Asesoría de Empresas: Fiscal, Laboral y Contable (6 meses)"
           institution="Escuela de Negocios y Dirección - ENyD"
           year="2021"
