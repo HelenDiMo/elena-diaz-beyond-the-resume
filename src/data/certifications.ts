@@ -120,19 +120,31 @@ export const certifications: Certification[] = [
       "/certifications/diploma/uni-nebrija-contratos-nominas-ss.pdf",
     logo: "/certifications/logos/uni-nebrija.webp",
   },
-  {
-    id: "equipo-nube",
-    title: "Admón. de Equipos Informáticos y Ofimática en la Nube (30 h.)",
-    issuer: "Andalucía Compromiso Digital · Euroformac",
+    {
+    id: "revenue-management",
+    title: "Revenue Management Profesional (3 h.)",
+    issuer:
+      "HotelsDot ·  Instituto de Emprendimiento Avanzado · Instituto Tecnológico Hotelero",
     category: "Gestión y Operaciones",
     date: "2020",
     description:
-      "Formación sobre Sistemas Operativos, Cloud Computing y Ofimática en la Nube",
-    credentialUrl:
-      "/certifications/diploma/andalucia-comp-digital-admin-nube.pdf",
-    logo: "/certifications/logos/acd-euroformac.svg",
+      "Formación de refuerzo sobre técnicas y fundamentos de Revenue Management hotelero.",
+    credentialUrl: "/certifications/diploma/hotelsdot-revenue-mng.pdf",
+    logo: "/certifications/logos/hoteldots-ith-instituto.png",
   },
-  {
+    {
+    id: "logistica-bar",
+    title:
+      "Logística en Bar: Aprovisionamiento y Almacenaje de Alimentos y Bebidas (35 h.)",
+    issuer: "SEPE · Euroformac",
+    category: "Gestión y Operaciones",
+    date: "2020",
+    description:
+      "Formación sobre Aprovisionamiento y Almacenaje de Alimentos y Bebidas.",
+    credentialUrl: "/certifications/diploma/euroformac-logistica-bar.pdf",
+    logo: "/certifications/logos/sepe-euroformac.svg",
+  },
+    {
     id: "adobe-canva",
     title:
       "Adobe Spark y Canva: Creación de Publicaciones para RRSS y Webs (30 h.)",
@@ -145,29 +157,29 @@ export const certifications: Certification[] = [
       "/certifications/diploma/andalucia-com-digital-adobe-canva.pdf",
     logo: "/certifications/logos/consorcio-fernando-rios.png",
   },
-  {
-    id: "revenue-management",
-    title: "Revenue Management Profesional (3 h.)",
-    issuer:
-      "HotelsDot ·  Instituto de Emprendimiento Avanzado · Instituto Tecnológico Hotelero",
+    {
+    id: "prezi-genially",
+    title: "Presentaciones Profesionales con Prezi y Genially (20 h.)",
+    issuer: "Andalucía Compromiso Digital · Euroformac",
     category: "Gestión y Operaciones",
     date: "2020",
     description:
-      "Formación de refuerzo sobre técnicas y fundamentos de Revenue Management hotelero.",
-    credentialUrl: "/certifications/diploma/hotelsdot-revenue-mng.pdf",
-    logo: "/certifications/logos/hoteldots-ith-instituto.png",
+      "Formación sobre creación de contenidos con las herramientas Prezi y Genially.",
+    credentialUrl:
+      "/certifications/diploma/andalucia-comp-prezi.pdf",
+    logo: "/certifications/logos/acd-euroformac.svg",
   },
   {
-    id: "logistica-bar",
-    title:
-      "Logística en Bar: Aprovisionamiento y Almacenaje de Alimentos y Bebidas (35 h.)",
-    issuer: "SEPE · Euroformac",
+    id: "equipo-nube",
+    title: "Admón. de Equipos Informáticos y Ofimática en la Nube (30 h.)",
+    issuer: "Andalucía Compromiso Digital · Euroformac",
     category: "Gestión y Operaciones",
     date: "2020",
     description:
-      "Formación sobre Aprovisionamiento y Almacenaje de Alimentos y Bebidas.",
-    credentialUrl: "/certifications/diploma/euroformac-logistica-bar.pdf",
-    logo: "/certifications/logos/sepe-euroformac.svg",
+      "Formación sobre Sistemas Operativos, Cloud Computing y Ofimática en la Nube",
+    credentialUrl:
+      "/certifications/diploma/andalucia-comp-digital-admin-nube.pdf",
+    logo: "/certifications/logos/acd-euroformac.svg",
   },
   {
     id: "mkt-digital-inicio",
