@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { Certification } from "@/types/certification";
+import Link from "next/link";
 
 function CertificationCard({
   certification,
@@ -56,12 +57,9 @@ function CertificationCard({
           </div>
 
           <div className="mt-6">
-
-             {/*<p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
+            {/*<p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
               {certification.category}
             </p>   --> SI QUIERO AÑADIR LA CATEGORIA AL FRONT DE LA TARJETA */}
-
-            
 
             <h4 className="mt-3 min-h-14 text-lg font-semibold leading-snug text-white">
               {certification.title}
@@ -206,18 +204,34 @@ export default function CertificationList({
         category="Programación & Data"
         certifications={certifications}
       />
-
+      <Link
+        href="/#certificationbutton"
+        className="inline-flex items-center gap-2 text-sm font-medium text-teal transition-colors hover:text-oceanic"
+      >
+        ← Volver al portfolio
+      </Link>
       <CertificationCarousel
         title="AI / Inteligencia Artificial"
         category="AI / Inteligencia Artificial"
         certifications={certifications}
       />
-
+      <Link
+        href="/#certificationbutton"
+        className="inline-flex items-center gap-2 text-sm font-medium text-teal transition-colors hover:text-oceanic"
+      >
+        ← Volver al portfolio
+      </Link>
       <CertificationCarousel
         title="Gestión y Operaciones"
         category="Gestión y Operaciones"
         certifications={certifications}
       />
+      <Link
+        href="/#certificationbutton"
+        className="inline-flex items-center gap-2 text-sm font-medium text-teal transition-colors hover:text-oceanic"
+      >
+        ← Volver al portfolio
+      </Link>
     </div>
   );
 }

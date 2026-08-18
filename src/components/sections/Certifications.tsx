@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function EducationCard({
   logo,
   title,
@@ -39,7 +41,7 @@ function EducationCard({
 }
 export default function Certifications() {
   return (
-    <div className="mt-16 border-t pt-10">
+    <section id="certificationbutton" className="mt-16 border-t pt-10">
       <h3 className="text-2xl font-bold text-teal">Formación Principal</h3>
 
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -81,12 +83,12 @@ export default function Certifications() {
         profesional en Business, Data, AI y tecnología.
       </p>
 
-      <a
+      <Link
         href="/certifications"
         className="mt-6 inline-block font-medium underline underline-offset-4 transition-colors hover:text-oceanic"
       >
         Ver formación y certificaciones →
-      </a>
-    </div>
+      </Link>
+    </section>
   );
 }
