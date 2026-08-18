@@ -8,7 +8,7 @@ export const certifications: Certification[] = [
     category: "Programación & Data",
     date: "2026",
     description:
-      "Formación introductoria en programación con Python, incluyendo Git y GitHub, fundamentos de desarrollo web, programación orientada a objetos (OOP/POO) y testing con Python.",
+      "Formación introductoria en programación con Python, incluyendo Git y GitHub, fundamentos de desarrollo web, OOP / POO y testing con Python.",
     credentialUrl: "/certifications/diploma/ibm_iniciacion_python.pdf",
     logo: "/certifications/logos/ibm-bejob.svg",
   },
@@ -19,7 +19,7 @@ export const certifications: Certification[] = [
     category: "Programación & Data",
     date: "2026",
     description:
-      "Formación avanzada en Python y desarrollo backend, incluyendo POO, bases de datos, APIs con FastAPI, persistencia de datos, arquitectura backend y testing automatizado con pytest.",
+      "Formación avanzada en Python y desarrollo backend, incluyendo POO, bases de datos, FastAPI, persistencia de datos, arquitectura backend y testing con pytest.",
     credentialUrl: "/certifications/diploma/ibm_python_avanzado.pdf",
     logo: "/certifications/logos/ibm-bejob.svg",
   },
@@ -64,7 +64,7 @@ export const certifications: Certification[] = [
     category: "AI / Inteligencia Artificial",
     date: "2026",
     description:
-      "Formación práctica en inteligencia artificial aplicada a Pymes, con especialización en IA generativa y Prompt Engineering. Incluye fundamentos de Machine Learning y Deep Learning, uso de herramientas como ChatGPT y Copilot y aplicación de técnicas de prompting a diferentes sectores profesionales.",
+      "Formación práctica en inteligencia artificial aplicada a Pymes, con especialización en IA generativa y Prompt Engineering.",
     credentialUrl: "/certifications/diploma/laborus-ia-pymes-prompt.pdf",
     logo: "/certifications/logos/laborus.png",
   },
