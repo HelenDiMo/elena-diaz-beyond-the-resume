@@ -52,7 +52,7 @@ export const certifications: Certification[] = [
     category: "AI / Inteligencia Artificial",
     date: "2026",
     description:
-      "Formación introductoria sobre programación en Python, lógica, matemáticas básicas y ciencia de datos",
+      "Formación introductoria sobre programación en Python, lógica, matemáticas básicas y ciencia de datos.",
     credentialUrl: "/certifications/diploma/somos-f5-intro-ia.pdf",
     logo: "/certifications/logos/somos-f5.png",
   },
@@ -75,7 +75,7 @@ export const certifications: Certification[] = [
     category: "Gestión y Operaciones",
     date: "2018",
     description:
-      "Formación sobre fundamentos e introducción al Marketing Digital",
+      "Formación sobre fundamentos e introducción al Marketing Digital.",
     credentialUrl: "/certifications/diploma/google-mkt-digital.pdf",
     logo: "/certifications/logos/google.svg",
   },
@@ -97,7 +97,7 @@ export const certifications: Certification[] = [
     category: "Gestión y Operaciones",
     date: "2020",
     description:
-      "Formación sobre Aprovisionamiento y Almacenaje de Alimentos y Bebidas",
+      "Formación sobre Aprovisionamiento y Almacenaje de Alimentos y Bebidas.",
     credentialUrl: "/certifications/diploma/euroformac-logistica-bar.pdf",
     logo: "/certifications/logos/sepe-euroformac.svg",
   },
@@ -108,7 +108,7 @@ export const certifications: Certification[] = [
     category: "Gestión y Operaciones",
     date: "2025",
     description:
-      "Formación especializada en gestión de Contratos y Nóminas según el reglamento de la Seguridad Social",
+      "Formación especializada en gestión de Contratos y Nóminas según el reglamento de la Seguridad Social.",
     credentialUrl: "/certifications/diploma/uni-nebrija-contratos-nominas-ss.pdf",
     logo: "/certifications/logos/uni-nebrija.webp",
   },
@@ -129,18 +129,18 @@ export const certifications: Certification[] = [
     issuer: "SEPE · Global Knowledge Network Spain SLU",
     category: "Gestión y Operaciones",
     date: "2026",
-    description: "Formación en entornos Agile y Scrum, con enfoque en colaboración, desarrollo guiado por pruebas, testing, integración continua, automatización y buenas prácticas de desarrollo.",
+    description: "Formación en entornos Agile y Scrum, con enfoque en colaboración, testing, integración continua, automatización y buenas prácticas de desarrollo.",
     credentialUrl: "/certifications/diploma/sepe-scrum-nodni.pdf",
     logo: "/certifications/logos/sepe-skillsoft.svg",
   },
   {
     id: "ai-mkt-digital",
-    title: "Marketing Digital con IA (6 h.)",
+    title: "Marketing Digital con IA - (6 h.)",
     issuer: "BIG SCHOOL",
     category: "Gestión y Operaciones",
     date: "2026",
     description:
-      "Formación de Marketing Digital integrando IA para creación de propuestas de valor, captación y automatización mediante SEO, SEM, el diseño de landing pages y sistemas de Lead Magnets",
+      "Formación sobre como integrar IA para creación de propuestas de valor, captación y automatización mediante SEO, SEM, el diseño de landing pages y sistemas de Lead Magnets.",
     credentialUrl: "/certifications/diploma/big-school-mkt-digital-ia.pdf",
     logo: "/certifications/logos/bigschool.svg",
   },

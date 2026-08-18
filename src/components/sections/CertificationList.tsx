@@ -12,7 +12,7 @@ function CertificationCard({
 
   return (
     <div
-      className="group min-w-75 max-w-75 shrink-0 cursor-pointer"
+      className="group min-w-75 max-w-75 shrink-0 cursor-help"
       style={{ perspective: "1800px" }}
       onClick={() => setIsFlipped((current) => !current)}
       onKeyDown={(event) => {
