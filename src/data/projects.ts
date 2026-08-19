@@ -1,13 +1,15 @@
-export const projects = [
+import type { Project } from "@/types/project";
+
+export const projects: Project[] = [
   {
     slug: "archaios-data-intelligence",
     title: "Archaios Data Intelligence",
-    category: "Data · Power BI",
+    category: "Data · Power BI · Base de Datos · EDA",
     description:
-      "Proyecto de análisis y visualización de datos orientado a transformar información operativa en conocimiento útil para la toma de decisiones.",
-    technologies: ["Power BI", "Data Analysis"],
+      "Análisis arqueológico‑militar basado en datos históricos de bombardeos aliados (THOR). Incluye un ETL completo en Python, análisis exploratorio, detección de sesgos y un dashboard geoespacial en Power BI para apoyar la interpretación arqueológica contemporánea.",
+    technologies: ["Power BI", "Data Analysis", "Bases de Datos", "EDA"],
     github: "https://github.com/HelenDiMo/archaios-data-Intelligence.git",
-    image: "/projects/archaios-data-intelligence.png",
+    image: "/projects/adi3.png",
   },
   {
     slug: "app-climatica-avanzada",
