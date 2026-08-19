@@ -11,7 +11,7 @@ export const projects: Project[] = [
     github: "https://github.com/HelenDiMo/archaios-data-Intelligence.git",
     image: "/projects/adi3.png",
   },
-  {
+  /*{
     slug: "app-climatica-avanzada",
     title: "App Climática Avanzada",
     category: "Python · Data",
@@ -29,5 +29,5 @@ export const projects: Project[] = [
     technologies: ["Python", "AI"],
     github:
       "https://github.com/HelenDiMo/P.A.W.L-e---Robot-Paseador-de-Perros.git",
-  },
+  },*/
 ];
