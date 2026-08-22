@@ -9,7 +9,8 @@ export const projects: Project[] = [
       "Análisis arqueológico‑militar basado en datos históricos de bombardeos aliados (THOR). Incluye un ETL completo en Python, análisis exploratorio, detección de sesgos y un dashboard geoespacial en Power BI para apoyar la interpretación arqueológica contemporánea.",
     technologies: ["Power BI", "Data Analysis", "Bases de Datos", "EDA"],
     github: "https://github.com/HelenDiMo/archaios-data-Intelligence.git",
-    image: "/projects/adi3.png",
+    image: "/projects/archaios/adi_logo.png",
+    heroImage: "/projects/archaios/main_image.png",
   },
   /*{
     slug: "app-climatica-avanzada",

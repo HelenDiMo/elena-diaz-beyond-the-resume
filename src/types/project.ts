@@ -4,6 +4,7 @@ export type Project = {
   category: string;
   description: string;
   technologies: string[];
+  image: string;
+  heroImage?: string;
   github?: string;
-  image?: string;
 };
