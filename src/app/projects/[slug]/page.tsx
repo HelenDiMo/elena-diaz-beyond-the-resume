@@ -57,6 +57,9 @@ export default async function ProjectPage({
           <p className="text-sm font-medium uppercase tracking-[0.3em]">
             {project.category}
           </p>
+          <p className="mt-3 text-1 font-italic text-neutral-500 dark:text-neutral-400">
+            Proyecto individual · Bootcamp IA
+          </p>
 
           <h1 className="mt-4 text-5xl font-bold md:text-6xl">
             {project.title}
