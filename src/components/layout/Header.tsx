@@ -53,14 +53,6 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/#dashboard"
-                    className="transition-colors hover:text-oceanic"
-                  >
-                    Dashboard
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/#contact"
                     className="transition-colors hover:text-oceanic"
                   >
