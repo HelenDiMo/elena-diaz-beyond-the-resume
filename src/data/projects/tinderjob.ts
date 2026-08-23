@@ -10,7 +10,7 @@ export const tinderjob: Project = {
   /* DESCRIPCIÓN PARA LA TARJETA */
 
   description:
-    "Proyecto de analítica avanzada y automatización orientado al análisis del mercado laboral tecnológico en España.",
+    "Proyecto de analítica avanzada y automatización para analizar el mercado laboral tecnológico en España. A partir de múltiples fuentes de datos, el proyecto combina web scraping, procesamiento y análisis estadístico para identificar las competencias más demandadas, tendencias salariales y patrones del mercado, incorporando además un sistema de matching que conecta las habilidades de un candidato con las ofertas disponibles.",
 
   /* DESCRIPCIÓN DE LA PAG. INDIVIDUAL */
 
