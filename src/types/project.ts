@@ -22,7 +22,15 @@ export type ProjectSection = {
   title: string;
   content?: string[];
   items?: string[];
-  steps?: ProjectStep[];
+  steps?: {
+    number: string;
+    title: string;
+  }[];
+  image?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  };
 };
 
 export type ProjectInsight = {
@@ -77,4 +85,6 @@ export type Project = {
   insights?: ProjectInsight[];
 
   governance?: ProjectGovernance;
+
+  demoUrl?: string;
 };

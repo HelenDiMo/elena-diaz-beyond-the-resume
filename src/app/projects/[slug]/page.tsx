@@ -116,6 +116,25 @@ export default async function ProjectPage({
                       ))}
                     </div>
                   )}
+                  {section.image && (
+                    <figure className="mt-10">
+                      <div className="overflow-hidden rounded-2xl border">
+                        <Image
+                          src={section.image.src}
+                          alt={section.image.alt}
+                          width={1200}
+                          height={675}
+                          className="h-auto w-full object-cover"
+                        />
+                      </div>
+
+                      {section.image.caption && (
+                        <figcaption className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
+                          {section.image.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
 
                   {/* Section steps */}
                   {section.steps && section.steps.length > 0 && (
@@ -204,7 +223,7 @@ export default async function ProjectPage({
               Lo que revelan los datos
             </h2>
 
-            <div className="mt-10 space-y-6">
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
               {project.insights.map((insight) => (
                 <article
                   key={insight.number}
@@ -285,8 +304,8 @@ export default async function ProjectPage({
           </section>
         )}
 
-        {/* GitHub */}
-        {project.github && (
+        {/* Project Links */}
+        {(project.demoUrl || project.github) && (
           <section className="mt-24 border-t pt-16">
             <div className="flex flex-col gap-6 rounded-2xl border p-8 md:flex-row md:items-center md:justify-between">
               <div>
@@ -295,22 +314,36 @@ export default async function ProjectPage({
                 </p>
 
                 <h2 className="mt-2 text-2xl font-bold">
-                  Código y documentación
+                  Código, documentación y aplicación
                 </h2>
               </div>
 
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 font-medium underline underline-offset-4"
-              >
-                Ver repositorio en GitHub ↗
-              </a>
+              <div className="flex flex-wrap gap-6">
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium underline underline-offset-4"
+                  >
+                    Ver aplicación ↗
+                  </a>
+                )}
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium underline underline-offset-4"
+                  >
+                    Ver repositorio en GitHub ↗
+                  </a>
+                )}
+              </div>
             </div>
           </section>
         )}
-
         {/* Back */}
         <div className="mt-16 border-t pt-8">
           <Link

@@ -74,6 +74,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               Ver en GitHub ↗
             </a>
           )}
+          {project.demoUrl && (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-white/60 underline underline-offset-4 transition-colors hover:text-white"
+            >
+              Ver aplicación ↗
+            </a>
+          )}
         </div>
       </div>
     </motion.article>
