@@ -31,7 +31,7 @@ export default function Contact() {
         {/* Contact content */}
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {/* Formulario */}
-          <div className="rounded-2xl border border-teal/20 bg-white/[0.02] p-5 md:p-6">
+          <div className="rounded-2xl border border-teal/20 bg-white/200 p-5 md:p-6">
             <h3 className="text-2xl font-bold text-white">
               Cuéntame qué tienes en mente
             </h3>

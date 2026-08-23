@@ -75,7 +75,7 @@ export default function CursorTrail() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-[9999] hidden md:block"
+      className="pointer-events-none fixed inset-0 z-9999 hidden md:block"
     >
       {points.current.map((_, index) => {
         const size = Math.max(3, 10 - index * 0.6);
