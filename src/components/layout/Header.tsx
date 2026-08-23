@@ -63,7 +63,7 @@ export default function Header() {
             </nav>
 
             <div className="flex items-right gap-2">
-              <LanguageToggle />
+              {/* <LanguageToggle />  --> DE MOMENTO NO LO VAMOS A USAR*/}
 
               {/* <ThemeToggle /> -> PORQUE DE MOMENTO NO LO VAMOS A UTILIZAR */}
             </div>
