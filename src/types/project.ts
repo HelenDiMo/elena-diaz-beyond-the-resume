@@ -13,19 +13,16 @@ export type ProjectTheme = {
   border: string;
 };
 
+export type ProjectStep = {
+  number: string;
+  title: string;
+};
+
 export type ProjectSection = {
   title: string;
   content?: string[];
   items?: string[];
-  steps?: {
-    number: string;
-    title: string;
-  }[];
-}[];
-
-export type ProjectStep = {
-  number: string;
-  title: string;
+  steps?: ProjectStep[];
 };
 
 export type ProjectInsight = {
@@ -54,9 +51,11 @@ export type Project = {
   title: string;
   category: string;
   description: string;
-  theme?: ProjectTheme;
+
+  theme: ProjectTheme;
 
   technologies: string[];
+
   tagline?: string;
   maintext?: string[];
 
