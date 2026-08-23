@@ -13,11 +13,13 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
   const [selectedProject, setSelectedProject] = useState<Project>(projects[0]);
 
   return (
-    <div className="relative mt-16">
-      <div className="relative mx-auto max-w-3xl"> {/*Anchura de la carpeta*/}
+    <div className="relative mt-20">
+      <div className="relative mx-auto max-w-3xl">
+        {" "}
+        {/*Anchura de la carpeta*/}
         {/* CARPETA */}
-        <div className="relative rounded-2xl border border-teal/30 bg-graphite px-6 pb-8 pt-4 shadow-2xl"> 
-        {/* pt-4 es para tocar el espacio entre la tarjetita perqueña y el folder (parte de arriba)*/}
+        <div className="relative rounded-2xl border border-teal/30 bg-graphite px-6 pb-8 pt-4 shadow-2xl">
+          {/* pt-4 es para tocar el espacio entre la tarjetita perqueña y el folder (parte de arriba)*/}
           {/* PESTAÑAS */}
           <div className="absolute -top-10 left-6 flex items-end gap-2">
             {projects.map((project) => {
@@ -41,7 +43,9 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
           </div>
 
           {/* CONTENIDO */}
-          <div className="relative min-h-80"> {/* Altura de la Carpeta*/}
+          <div className="relative min-h-80">
+            {" "}
+            {/* Altura de la Carpeta*/}
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedProject.slug}

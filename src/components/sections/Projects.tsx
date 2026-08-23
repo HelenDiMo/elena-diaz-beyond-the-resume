@@ -7,12 +7,12 @@ export default function Projects() {
     <section id="projects" className="py-24">
       <Container>
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-teal">
             Proyectos
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Lo que estoy construyendo
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl text-oceanic">
+            Mis proyectos favoritos
           </h2>
 
           {/* <p className="mt-6 text-lg leading-relaxed">
