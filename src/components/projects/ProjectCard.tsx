@@ -46,6 +46,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {/* mt- Espacios verticales */}
           {project.description}
         </p>
+        
         {/*<ul className="mt-5 flex flex-wrap gap-2">
           {project.technologies.map((technology) => (
             <li

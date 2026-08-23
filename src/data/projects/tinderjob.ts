@@ -211,6 +211,6 @@ export const tinderjob: Project = {
     "GitHub Actions",
   ],
   github: "https://github.com/HelenDiMo/TinderJob.git",
-  image: "/projects/tinderjobs/logo.png",
+  image: "/projects/tinderjob/logo.png",
   demoUrl: "https://tinderjob-bootcamp.streamlit.app/",
 };
