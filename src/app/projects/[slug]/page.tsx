@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projects } from "@/data/projects";
-import Image from "next/image";
+
 import ProjectGallery from "@/components/projects/ProjectGallery";
+import { projects } from "@/data/projects";
 
 export default async function ProjectPage({
   params,
@@ -17,29 +18,7 @@ export default async function ProjectPage({
     notFound();
   }
 
-  const galleryImages = [
-    {
-      src: "/projects/archaios/dashboard-overview.png",
-      alt: "Panorama global de las operaciones aéreas entre 1943 y 1944",
-      title: "Panorama global · 1943–1944",
-      description:
-        "Vista general de la actividad aérea registrada durante el periodo analizado para identificar patrones y zonas de concentración.",
-    },
-    {
-      src: "/projects/archaios/june-1-5.png",
-      alt: "Análisis de las operaciones del 1 al 5 de junio de 1944",
-      title: "1–5 de junio de 1944",
-      description:
-        "Análisis de los días previos al desembarco y de los objetivos e infraestructuras atacados durante esta fase.",
-    },
-    {
-      src: "/projects/archaios/d-day.png",
-      alt: "Análisis de las operaciones del Día D",
-      title: "Día D · 6 de junio de 1944",
-      description:
-        "Exploración de la actividad registrada durante el Día D y de su distribución espacial.",
-    },
-  ];
+  const heroImage = project.heroImage ?? project.image;
 
   return (
     <main className="py-24">
@@ -57,320 +36,269 @@ export default async function ProjectPage({
           <p className="text-sm font-medium uppercase tracking-[0.3em]">
             {project.category}
           </p>
-          <p className="mt-3 text-1 font-italic text-neutral-500 dark:text-neutral-400">
-            Proyecto individual · Bootcamp IA
-          </p>
+
+          {project.context && (
+            <p className="mt-3 italic text-neutral-500 dark:text-neutral-400">
+              {project.context}
+            </p>
+          )}
 
           <h1 className="mt-4 text-5xl font-bold md:text-6xl">
             {project.title}
           </h1>
 
-          <p className="mt-3 text-xl font-medium text-neutral-500 dark:text-neutral-400">
-            Operación Normandía
-          </p>
+          {project.tagline && (
+            <p className="mt-3 text-xl font-medium text-neutral-500 dark:text-neutral-400">
+              {project.tagline}
+            </p>
+          )}
 
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-            Proyecto individual de inteligencia de datos que transforma
-            registros históricos de operaciones aéreas de la Segunda Guerra
-            Mundial en una herramienta de análisis geoespacial aplicada a la
-            investigación arqueológica.
-          </p>
+          {/* Main text */}
+          {project.maintext && project.maintext.length > 0 && (
+            <div className="mt-6 max-w-3xl space-y-4 text-lg leading-relaxed">
+              {project.maintext.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+          )}
 
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed">
-            El dashboard permite explorar patrones de bombardeo, localizar zonas
-            de alta concentración de actividad y analizar la evolución de las
-            operaciones antes y durante el Día D.
-          </p>
-
-          <Image
-            src={project.heroImage || project.image}
-            alt={`${project.title} — dashboard`}
-            width={1200}
-            height={675}
-            className="mt-10 aspect-video w-full rounded-2xl object-cover"
-            priority
-          />
+          {heroImage && (
+            <Image
+              src={heroImage}
+              alt={project.title}
+              width={1200}
+              height={675}
+              className="mt-8 aspect-video w-full rounded-xl object-cover"
+            />
+          )}
         </section>
 
-        {/* The Project */}
-        <section className="mt-24 border-t pt-16">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
-            El proyecto
-          </p>
-
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-            Inteligencia de datos aplicada a la arqueología
-          </h2>
-
-          <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed">
-            <p>
-              Archaios Data Intelligence nace como un proyecto individual
-              centrado en transformar datos históricos de operaciones aéreas
-              durante la Segunda Guerra Mundial en información útil para la
-              investigación arqueológica.
+        {/* Role */}
+        {project.role && (
+          <section className="mt-24 border-t pt-16">
+            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+              Mi rol
             </p>
 
-            <p>
-              El análisis utiliza registros del repositorio THOR (Theater
-              History of Operations Reports) para estudiar la distribución
-              temporal y geográfica de las operaciones aliadas entre 1943 y el 6
-              de junio de 1944.
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              {project.role.title}
+            </h2>
+
+            <p className="mt-8 max-w-3xl text-lg leading-relaxed">
+              {project.role.description}
+            </p>
+          </section>
+        )}
+
+        {/* Project Sections */}
+        {project.sections && project.sections.length > 0 && (
+          <section className="mt-24 border-t pt-16">
+            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+              El proyecto
             </p>
 
-            <p>
-              El reto consistía en convertir estos registros históricos en una
-              herramienta interactiva capaz de revelar patrones y ayudar a
-              plantear una posible priorización de zonas de interés
-              arqueológico.
-            </p>
-          </div>
-        </section>
+            <div className="mt-10 space-y-16">
+              {project.sections.map((section, index) => (
+                <article key={`${section.title}-${index}`}>
+                  <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
 
-        {/* From Data to Insight */}
-        <section className="mt-24 border-t pt-16">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
-            Del dato al análisis
-          </p>
+                  <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+                    {section.title}
+                  </h2>
 
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-            Del dato bruto a una herramienta de análisis
-          </h2>
+                  {/* Section content */}
+                  {section.content && section.content.length > 0 && (
+                    <div className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed">
+                      {section.content.map((paragraph, paragraphIndex) => (
+                        <p key={paragraphIndex}>{paragraph}</p>
+                      ))}
+                    </div>
+                  )}
 
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed">
-            Trabajé en todo el proceso, desde la exploración y preparación de
-            los datos hasta el modelado, análisis y desarrollo del dashboard
-            interactivo.
-          </p>
+                  {/* Section steps */}
+                  {section.steps && section.steps.length > 0 && (
+                    <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {section.steps.map((step) => (
+                        <div
+                          key={step.number}
+                          className="rounded-2xl border border-teal/30 bg-graphite/40 p-5"
+                        >
+                          <span className="text-sm font-medium text-white/40">
+                            {step.number}
+                          </span>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              ["01", "Exploración"],
-              ["02", "Limpieza"],
-              ["03", "Análisis"],
-              ["04", "Modelado"],
-              ["05", "Visualización"],
-              ["06", "Insights"],
-            ].map(([number, title]) => (
-              <div key={number} className="rounded-2xl border p-5">
-                <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-                  {number}
-                </span>
+                          <h3 className="mt-2 text-lg font-semibold text-white">
+                            {step.title}
+                          </h3>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
-                <h3 className="mt-2 text-lg font-semibold">{title}</h3>
-              </div>
-            ))}
-          </div>
-        </section>
+                  {/* Section items */}
+                  {section.items && section.items.length > 0 && (
+                    <ul className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed">
+                      {section.items.map((item, itemIndex) => (
+                        <li key={`${item}-${itemIndex}`}>• {item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
-        {/* The Dashboard */}
-        <section className="mt-24 border-t pt-16">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
-            El dashboard
-          </p>
-
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-            Una visión interactiva de las operaciones
-          </h2>
-
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed">
-            El dashboard combina indicadores, filtros interactivos y
-            visualizaciones geográficas para explorar la actividad aérea desde
-            diferentes perspectivas temporales y estratégicas.
-          </p>
-
-          {/* Demo */}
-          <div className="mt-12">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
-              Demo interactiva
+        {/* Video */}
+        {project.video && (
+          <section className="mt-24 border-t pt-16">
+            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+              Demo
             </p>
 
-            <div className="mt-4 overflow-hidden rounded-2xl border">
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              Explora el proyecto
+            </h2>
+
+            <div className="mt-10 overflow-hidden rounded-2xl border">
               <video
                 className="h-auto w-full"
                 controls
                 playsInline
                 preload="metadata"
               >
-                <source
-                  src="/projects/archaios/demo_dashboard.mp4"
-                  type="video/mp4"
-                />
+                <source src={project.video} type="video/mp4" />
                 Tu navegador no soporta la reproducción de vídeo.
               </video>
             </div>
-          </div>
+          </section>
+        )}
 
-          {/* Gallery */}
-          <div className="mt-16">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
-              Vistas del dashboard
+        {/* Gallery */}
+        {project.gallery && project.gallery.length > 0 && (
+          <section className="mt-24 border-t pt-16">
+            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+              Galería
             </p>
 
-            <div className="mt-6">
-              <ProjectGallery images={galleryImages} />
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              Vistas del proyecto
+            </h2>
+
+            <div className="mt-10">
+              <ProjectGallery images={project.gallery} theme={project.theme} />
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        {/* Key Insights */}
-        <section className="mt-24 border-t pt-16">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
-            Principales conclusiones
-          </p>
+        {/* Insights */}
+        {project.insights && project.insights.length > 0 && (
+          <section className="mt-24 border-t pt-16">
+            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+              Principales conclusiones
+            </p>
 
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-            Lo que revelan los datos
-          </h2>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              Lo que revelan los datos
+            </h2>
 
-          <div className="mt-10 space-y-6">
-            <article className="rounded-2xl border p-6 md:p-8">
-              <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-                01
-              </span>
+            <div className="mt-10 space-y-6">
+              {project.insights.map((insight) => (
+                <article
+                  key={insight.number}
+                  className="rounded-2xl border p-6 md:p-8"
+                >
+                  <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+                    {insight.number}
+                  </span>
 
-              <h3 className="mt-3 text-xl font-semibold">
-                La actividad no se concentra únicamente en la línea de costa
-              </h3>
+                  <h3 className="mt-3 text-xl font-semibold">
+                    {insight.title}
+                  </h3>
 
-              <p className="mt-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
-                El análisis pone de manifiesto la importancia de objetivos
-                interiores vinculados a infraestructuras y redes de transporte.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border p-6 md:p-8">
-              <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-                02
-              </span>
-
-              <h3 className="mt-3 text-xl font-semibold">
-                Los nodos logísticos adquieren especial relevancia antes del Día
-                D
-              </h3>
-
-              <p className="mt-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
-                La concentración de operaciones durante los días previos ayuda a
-                identificar infraestructuras estratégicas dentro del teatro de
-                operaciones.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border p-6 md:p-8">
-              <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-                03
-              </span>
-
-              <h3 className="mt-3 text-xl font-semibold">
-                La densidad histórica puede orientar la priorización
-              </h3>
-
-              <p className="mt-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
-                Los patrones espaciales obtenidos pueden utilizarse como punto
-                de partida para plantear zonas de interés y orientar futuras
-                investigaciones arqueológicas.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        {/* Tech Stack */}
-        <section className="mt-24 border-t pt-16">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
-            Tecnologías
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            {[
-              "Python",
-              "Pandas",
-              "NumPy",
-              "Power BI",
-              "Excel",
-              "Jupyter Notebook",
-              "Data Cleaning",
-              "EDA",
-              "Visualización de Datos",
-              "Análisis Geospacial",
-              "Data Storytelling",
-            ].map((technology) => (
-              <span
-                key={technology}
-                className="rounded-full border px-4 py-2 text-sm"
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        {/* Data Governance */}
-        <section className="mt-24 border-t pt-16">
-          <p className="text-sm font-medium uppercase tracking-[0.3em]">
-            Gobernanza del dato
-          </p>
-
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-            Entender también las limitaciones del dato
-          </h2>
-
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed">
-            Los registros históricos utilizados presentan limitaciones de
-            representatividad, cobertura geográfica, etiquetado y calidad
-            temporal. Por ello, los resultados deben interpretarse como una
-            herramienta de exploración y priorización, no como una
-            representación completa de la actividad histórica.
-          </p>
-
-          <details className="mt-8 max-w-3xl rounded-2xl border p-6">
-            <summary className="cursor-pointer font-semibold">
-              Ver limitaciones del análisis
-            </summary>
-
-            <div className="mt-6 space-y-5 leading-relaxed text-neutral-600 dark:text-neutral-400">
-              <p>
-                <strong className="text-foreground">
-                  Sesgo de representatividad:
-                </strong>{" "}
-                solo se incluyen misiones documentadas, por lo que algunas
-                operaciones pueden no estar reflejadas.
-              </p>
-
-              <p>
-                <strong className="text-foreground">Sesgo geográfico:</strong>{" "}
-                la ausencia de registros en una zona no implica necesariamente
-                ausencia de actividad.
-              </p>
-
-              <p>
-                <strong className="text-foreground">
-                  Sesgo de etiquetado:
-                </strong>{" "}
-                algunos objetivos aparecen como “Unknown” o “Unidentified”.
-              </p>
-
-              <p>
-                <strong className="text-foreground">Sesgo temporal:</strong> la
-                documentación de 1944 puede ser más exhaustiva que la de
-                periodos anteriores.
-              </p>
+                  <p className="mt-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
+                    {insight.description}
+                  </p>
+                </article>
+              ))}
             </div>
-          </details>
-        </section>
+          </section>
+        )}
+
+        {/* Governance */}
+        {project.governance && (
+          <section className="mt-24 border-t pt-16">
+            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+              Gobernanza del dato
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              {project.governance.title}
+            </h2>
+
+            <p className="mt-8 max-w-3xl text-lg leading-relaxed">
+              {project.governance.content}
+            </p>
+
+            {/* Limitations */}
+            {project.governance.limitations &&
+              project.governance.limitations.length > 0 && (
+                <details className="mt-8 max-w-3xl rounded-2xl border p-6">
+                  <summary className="cursor-pointer font-semibold">
+                    Ver limitaciones del análisis
+                  </summary>
+
+                  <div className="mt-6 space-y-5 leading-relaxed text-neutral-600 dark:text-neutral-400">
+                    {project.governance.limitations.map((limitation) => (
+                      <p key={limitation.title}>
+                        <strong className="text-foreground">
+                          {limitation.title}:
+                        </strong>{" "}
+                        {limitation.description}
+                      </p>
+                    ))}
+                  </div>
+                </details>
+              )}
+          </section>
+        )}
+
+        {/* Technologies */}
+        {project.technologies.length > 0 && (
+          <section className="mt-24 border-t pt-16">
+            <p className="text-sm font-medium uppercase tracking-[0.3em]">
+              Tecnologías
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {project.technologies.map((technology) => (
+                <span
+                  key={technology}
+                  className="rounded-full border px-4 py-2 text-sm"
+                >
+                  {technology}
+                </span>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* GitHub */}
-        <section className="mt-24 border-t pt-16">
-          <div className="flex flex-col gap-6 rounded-2xl border p-8 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em]">
-                Explora el proyecto
-              </p>
+        {project.github && (
+          <section className="mt-24 border-t pt-16">
+            <div className="flex flex-col gap-6 rounded-2xl border p-8 md:flex-row md:items-center md:justify-between">
+              <div>
+                <p className="text-sm font-medium uppercase tracking-[0.2em]">
+                  Explora el proyecto
+                </p>
 
-              <h2 className="mt-2 text-2xl font-bold">
-                Datos, EDA, documentación y Power BI
-              </h2>
-            </div>
+                <h2 className="mt-2 text-2xl font-bold">
+                  Código y documentación
+                </h2>
+              </div>
 
-            {project.github && (
               <a
                 href={project.github}
                 target="_blank"
@@ -379,9 +307,9 @@ export default async function ProjectPage({
               >
                 Ver repositorio en GitHub ↗
               </a>
-            )}
-          </div>
-        </section>
+            </div>
+          </section>
+        )}
 
         {/* Back */}
         <div className="mt-16 border-t pt-8">
