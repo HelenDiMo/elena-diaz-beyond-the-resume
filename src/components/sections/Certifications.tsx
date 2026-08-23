@@ -46,7 +46,7 @@ export default function Certifications() {
 
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         <EducationCard
-          logo="public/certifications/logos/somos-f5.png"
+          logo="/certifications/logos/somos-f5.png"
           title="Bootcamp IA & Data (1250 h)"
           institution="Somos F5 · Fundación Tomillo"
           year="Cursando"
