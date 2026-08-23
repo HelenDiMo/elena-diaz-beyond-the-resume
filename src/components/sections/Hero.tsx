@@ -43,9 +43,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-6 max-w-2xl text-lg leading-relaxed"
           >
-            Más de 13 años de experiencia profesional, combinando una trayectoria en 
-            administración, finanzas y turismo con mi evolución hacia el análisis de datos 
-            y la inteligencia artificial.
+            Más de 13 años de experiencia profesional, combinando una
+            trayectoria en administración, finanzas y turismo con mi evolución
+            hacia el análisis de datos y la inteligencia artificial.
           </motion.p>
 
           {/* FINAL ANIMACIÓN DESCRIPCIÓN */}
@@ -69,6 +69,13 @@ export default function Hero() {
             >
               Explorar proyectos
             </Link>
+            <a
+              href="/cv/Elena-Diaz-CV.pdf"
+              download
+              className="rounded border border-teal px-5 py-3 font-medium text-white transition-colors hover:bg-teal"
+            >
+              Descargar CV
+            </a>
           </motion.div>
         </div>
       </Container>
