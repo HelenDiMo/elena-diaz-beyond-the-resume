@@ -226,7 +226,7 @@ export default function Contact() {
               <div className="mt-6 flex flex-wrap gap-3">
                 {/* Ver CV */}
                 <a
-                  href="/cv/CV-Elena-Diaz.pdf"
+                  href="/cv/Elena-Diaz-CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg bg-oceanic px-5 py-2.5 font-medium text-graphite transition hover:-translate-y-0.5 hover:bg-teal hover:text-white"
@@ -236,8 +236,8 @@ export default function Contact() {
 
                 {/* Descargar CV */}
                 <a
-                  href="/cv/CV-Elena-Diaz.pdf"
-                  download="CV-Elena-Diaz.pdf"
+                  href="/cv/Elena-Diaz-CV.pdf"
+                  download="Elena-Diaz-CV.pdf"
                   className="rounded-lg border border-teal px-5 py-2.5 font-medium text-teal transition hover:-translate-y-0.5 hover:bg-teal hover:text-white"
                 >
                   Descargar CV ↓
