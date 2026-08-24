@@ -6,11 +6,10 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-[calc(100vh-100px)] flex items-center">
+    <section className="flex min-h-[calc(100vh-100px)] items-center">
       <Container>
         <div className="max-w-4xl">
-          {/* INICIO ANIMACIÓN "Business · Data · AI"  */}
-
+          {/* Business · Data · AI */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -20,23 +19,17 @@ export default function Hero() {
             Business · Data · AI
           </motion.p>
 
-          {/* FINAL ANIMACIÓN "Business · Data · AI" */}
-
-          {/* INICIO ANIMACIÓN NOMBRE */}
-
+          {/* Nombre */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-5xl font-bold tracking-tight md:text-7xl text-oceanic"
+            className="text-5xl font-bold tracking-tight text-oceanic md:text-7xl"
           >
             Elena Díaz
           </motion.h1>
 
-          {/* FINAL ANIMACIÓN NOMBRE */}
-
-          {/* INICIO ANIMACIÓN DESCRIPCIÓN */}
-
+          {/* Descripción */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,31 +41,31 @@ export default function Hero() {
             hacia el análisis de datos y la inteligencia artificial.
           </motion.p>
 
-          {/* FINAL ANIMACIÓN DESCRIPCIÓN */}
-
+          {/* Botones */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-8 flex gap-4"
+            className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <Link
               href="/#experience"
-              className="rounded border border-teal px-5 py-3 font-medium text-white transition-colors hover:bg-teal"
+              className="w-full rounded border border-teal px-5 py-3 text-center font-medium text-white transition-colors hover:bg-teal sm:w-auto"
             >
               Ver mi evolución
             </Link>
 
             <Link
               href="/#projects"
-              className="rounded border border-teal px-5 py-3 font-medium text-white transition-colors hover:bg-teal"
+              className="w-full rounded border border-teal px-5 py-3 text-center font-medium text-white transition-colors hover:bg-teal sm:w-auto"
             >
               Explorar proyectos
             </Link>
+
             <a
               href="/cv/Elena-Diaz-CV.pdf"
               download
-              className="rounded border border-teal px-5 py-3 font-medium text-white transition-colors hover:bg-teal"
+              className="w-full rounded border border-teal px-5 py-3 text-center font-medium text-white transition-colors hover:bg-teal sm:w-auto"
             >
               Descargar CV
             </a>

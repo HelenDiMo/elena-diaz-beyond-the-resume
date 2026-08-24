@@ -13,6 +13,17 @@ export default function Timeline() {
 
   const activeItem = displayedTimeline[activeIndex];
 
+  const scroll = (direction: "left" | "right") => {
+    if (!containerRef.current) return;
+
+    const nextIndex =
+      direction === "right"
+        ? Math.min(activeIndex + 1, displayedTimeline.length - 1)
+        : Math.max(activeIndex - 1, 0);
+
+    handleSelect(nextIndex);
+  };
+
   const handleSelect = (index: number) => {
     setActiveIndex(index);
 
@@ -23,28 +34,18 @@ export default function Timeline() {
     });
   };
 
-  const handleArrow = (direction: "left" | "right") => {
-    const nextIndex =
-      direction === "right"
-        ? Math.min(activeIndex + 1, displayedTimeline.length - 1)
-        : Math.max(activeIndex - 1, 0);
-
-    if (nextIndex === activeIndex) return;
-
-    handleSelect(nextIndex);
-  };
-
   return (
-    <div className="mt-16 w-full">
+    <div className="mt-16 w-full min-w-0">
+      {/* Header */}
       <div className="flex items-center justify-between gap-4">
         <h3 className="text-2xl font-bold text-teal">
           Trayectoria profesional
         </h3>
 
-        <div className="flex gap-2">
+        <div className="flex shrink-0 gap-2">
           <button
             type="button"
-            onClick={() => handleArrow("left")}
+            onClick={() => scroll("left")}
             disabled={activeIndex === 0}
             aria-label="Ver etapas anteriores"
             className="rounded border border-teal/30 px-3 py-1 text-teal transition-colors hover:border-oceanic hover:text-oceanic disabled:cursor-not-allowed disabled:opacity-30"
@@ -54,7 +55,7 @@ export default function Timeline() {
 
           <button
             type="button"
-            onClick={() => handleArrow("right")}
+            onClick={() => scroll("right")}
             disabled={activeIndex === displayedTimeline.length - 1}
             aria-label="Ver etapas siguientes"
             className="rounded border border-teal/30 px-3 py-1 text-teal transition-colors hover:border-oceanic hover:text-oceanic disabled:cursor-not-allowed disabled:opacity-30"
@@ -67,9 +68,9 @@ export default function Timeline() {
       {/* Riel horizontal */}
       <div
         ref={containerRef}
-        className="hide-scrollbar mt-10 overflow-x-auto overflow-y-hidden scroll-smooth"
+        className="hide-scrollbar mt-10 w-full min-w-0 overflow-x-auto overflow-y-hidden scroll-smooth"
       >
-        <div className="relative flex min-w-max items-start">
+        <div className="relative flex w-max min-w-full items-start">
           {/* Línea horizontal */}
           <div className="absolute left-0 right-0 top-8 h-px bg-teal" />
 
@@ -86,8 +87,9 @@ export default function Timeline() {
                 onClick={() => handleSelect(index)}
                 aria-label={`Ver ${item.company}`}
                 aria-pressed={isActive}
-                className="flex min-w-35 flex-1 flex-col items-center gap-2 px-2 text-center"
+                className="flex w-48 shrink-0 flex-col items-center gap-2 px-2 text-center sm:w-52"
               >
+                {/* Año */}
                 <span
                   className={`text-xs font-medium transition-colors ${
                     isActive ? "text-oceanic" : "text-teal"
@@ -96,18 +98,20 @@ export default function Timeline() {
                   {item.year}
                 </span>
 
+                {/* Punto */}
                 <motion.span
                   whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.95 }}
                   animate={{ scale: isActive ? 1.3 : 1 }}
                   transition={{ duration: 0.2 }}
-                  className={`z-10 h-4 w-4 rounded-full border-2 ${
+                  className={`z-10 h-4 w-4 shrink-0 rounded-full border-2 ${
                     isActive
                       ? "border-oceanic bg-oceanic"
                       : "border-teal bg-graphite"
                   }`}
                 />
 
+                {/* Empresa */}
                 <span
                   className={`text-sm font-semibold leading-snug transition-colors ${
                     isActive ? "text-white" : "text-white/50"
@@ -129,7 +133,7 @@ export default function Timeline() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="mx-auto mt-8 max-w-2xl rounded-xl border border-teal/40 bg-graphite p-6 md:p-8"
+          className="mx-auto mt-8 w-full max-w-2xl rounded-xl border border-teal/40 bg-graphite p-6 md:p-8"
         >
           <p className="text-sm font-medium text-oceanic">
             {activeItem.year}
@@ -139,7 +143,9 @@ export default function Timeline() {
             {activeItem.company}
           </h4>
 
-          <p className="mt-1 text-sm text-teal">{activeItem.location}</p>
+          <p className="mt-1 text-sm text-teal">
+            {activeItem.location}
+          </p>
 
           <div className="mt-4 space-y-2">
             {activeItem.roles.map((role) => (
@@ -148,7 +154,9 @@ export default function Timeline() {
                   <p className="text-sm text-teal">{role.period}</p>
                 )}
 
-                <p className="font-medium text-oceanic">{role.title}</p>
+                <p className="font-medium text-oceanic">
+                  {role.title}
+                </p>
               </div>
             ))}
           </div>
