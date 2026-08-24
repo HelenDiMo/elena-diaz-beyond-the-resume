@@ -13,15 +13,6 @@ export default function Timeline() {
 
   const activeItem = displayedTimeline[activeIndex];
 
-  const scroll = (direction: "left" | "right") => {
-    if (!containerRef.current) return;
-
-    containerRef.current.scrollBy({
-      left: direction === "right" ? 260 : -260,
-      behavior: "smooth",
-    });
-  };
-
   const handleSelect = (index: number) => {
     setActiveIndex(index);
 
@@ -30,6 +21,17 @@ export default function Timeline() {
       inline: "center",
       block: "nearest",
     });
+  };
+
+  const handleArrow = (direction: "left" | "right") => {
+    const nextIndex =
+      direction === "right"
+        ? Math.min(activeIndex + 1, displayedTimeline.length - 1)
+        : Math.max(activeIndex - 1, 0);
+
+    if (nextIndex === activeIndex) return;
+
+    handleSelect(nextIndex);
   };
 
   return (
@@ -42,18 +44,20 @@ export default function Timeline() {
         <div className="flex gap-2">
           <button
             type="button"
-            onClick={() => scroll("left")}
+            onClick={() => handleArrow("left")}
+            disabled={activeIndex === 0}
             aria-label="Ver etapas anteriores"
-            className="rounded border px-3 py-1 transition-colors hover:border-oceanic hover:text-oceanic"
+            className="rounded border border-teal/30 px-3 py-1 text-teal transition-colors hover:border-oceanic hover:text-oceanic disabled:cursor-not-allowed disabled:opacity-30"
           >
             ←
           </button>
 
           <button
             type="button"
-            onClick={() => scroll("right")}
+            onClick={() => handleArrow("right")}
+            disabled={activeIndex === displayedTimeline.length - 1}
             aria-label="Ver etapas siguientes"
-            className="rounded border px-3 py-1 transition-colors hover:border-oceanic hover:text-oceanic"
+            className="rounded border border-teal/30 px-3 py-1 text-teal transition-colors hover:border-oceanic hover:text-oceanic disabled:cursor-not-allowed disabled:opacity-30"
           >
             →
           </button>

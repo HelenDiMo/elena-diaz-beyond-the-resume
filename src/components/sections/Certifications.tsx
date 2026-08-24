@@ -12,20 +12,22 @@ function EducationCard({
   year: string;
 }) {
   return (
-    <div className="flex flex-col rounded-xl border border-teal/40 bg-graphite p-6">
-      <div className="flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5">
+    <div className="flex flex-col rounded-xl border border-teal/40 bg-graphite p-4 sm:p-6">
+      {/* Logo */}
+      <div className="flex h-20 w-full items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/5 px-3">
         {logo ? (
           <img
             src={logo}
             alt={`Logo de ${institution}`}
-            className="max-h-14 max-w-40 object-contain"
+            className="max-h-12 w-auto max-w-full object-contain sm:max-h-14"
           />
         ) : (
           <span className="text-sm text-white/50">Sin logo</span>
         )}
       </div>
 
-      <div className="mt-6">
+      {/* Información */}
+      <div className="mt-5">
         <p className="text-xs font-medium uppercase tracking-[0.15em] text-teal">
           {year}
         </p>
@@ -39,6 +41,7 @@ function EducationCard({
     </div>
   );
 }
+
 export default function Certifications() {
   return (
     <section id="certificationbutton" className="mt-16 border-t pt-10">
