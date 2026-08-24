@@ -36,13 +36,13 @@ export const skills = {
         name: "Visión de negocio",
         logo: "/logos/eye-teal-007880.svg",
       },
-            {
+      {
         name: "Método Agile",
         logo: "/logos/agile-teal-007880.svg",
       },
       {
         name: "Marketing Digital",
-        logo: "/logos/marketing-teal-007880.svg"
+        logo: "/logos/marketing-teal-007880.svg",
       },
     ],
   },
@@ -153,7 +153,7 @@ export const skills = {
       "Ecosistema de herramientas utilizadas para desarrollar, analizar, visualizar, documentar y desplegar proyectos.",
     items: [
       {
-        name: "Micrsoft Office",
+        name: "Microsoft Office",
         logo: "/logos/microsoft-office-teal-007880.svg",
       },
       {
