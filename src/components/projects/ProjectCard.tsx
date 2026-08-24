@@ -21,9 +21,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       }}
       className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-xl bg-graphite/40"
     >
-      {/* Logo */}
+      {/* Imagen / logo */}
       {project.image && (
-        <div className="absolute right-3 top-3 flex h-16 w-16 items-center justify-center sm:right-5 sm:top-5 sm:h-20 sm:w-20">
+        <div className="absolute right-3 top-3 flex h-16 w-16 items-center justify-center sm:right-4 sm:top-4 sm:h-20 sm:w-20">
           <Image
             src={project.image}
             alt={`Imagen representativa de ${project.title}`}
@@ -40,27 +40,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.category}
         </p>
 
-        <h3 className="mt-3 text-2xl font-bold text-white">
+        <h3 className="mt-3 text-xl font-bold text-white sm:text-2xl">
           {project.title}
         </h3>
 
         <p className="mt-4 leading-relaxed text-white/70">
           {project.description}
         </p>
-
-        {/* Tecnologías — actualmente desactivado */}
-        {/*
-        <ul className="mt-5 flex flex-wrap gap-2">
-          {project.technologies.map((technology) => (
-            <li
-              key={technology}
-              className="rounded-full border border-white/10 px-3 py-1 text-sm text-white/70"
-            >
-              {technology}
-            </li>
-          ))}
-        </ul>
-        */}
 
         {/* Enlaces */}
         <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3">

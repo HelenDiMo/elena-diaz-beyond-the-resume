@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { Project } from "@/types/project";
 import ProjectCard from "./ProjectCard";
 
@@ -11,26 +11,45 @@ type ProjectFolderProps = {
 
 export default function ProjectFolder({ projects }: ProjectFolderProps) {
   const [selectedProject, setSelectedProject] = useState<Project>(projects[0]);
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  const handleSelect = (project: Project) => {
+    setSelectedProject(project);
+
+    const tab = document.getElementById(`project-tab-${project.slug}`);
+
+    tab?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  };
+
+  if (!projects.length) {
+    return null;
+  }
 
   return (
     <div className="relative mt-20">
       <div className="relative mx-auto max-w-3xl">
-        {" "}
-        {/*Anchura de la carpeta*/}
         {/* CARPETA */}
-        <div className="relative rounded-2xl border border-teal/30 bg-graphite px-6 pb-8 pt-4 shadow-2xl">
-          {/* pt-4 es para tocar el espacio entre la tarjetita perqueña y el folder (parte de arriba)*/}
+        <div className="relative rounded-2xl border border-teal/30 bg-graphite px-4 pb-6 pt-4 shadow-2xl sm:px-6 sm:pb-8">
           {/* PESTAÑAS */}
-          <div className="absolute -top-10 left-6 flex items-end gap-2">
+          <div
+            ref={tabsRef}
+            className="hide-scrollbar absolute -top-10 left-0 right-0 flex items-end gap-2 overflow-x-auto px-4 sm:left-6 sm:right-auto sm:px-0"
+          >
             {projects.map((project) => {
               const isSelected = selectedProject.slug === project.slug;
 
               return (
                 <button
                   key={project.slug}
+                  id={`project-tab-${project.slug}`}
                   type="button"
-                  onClick={() => setSelectedProject(project)}
-                  className={`relative rounded-t-lg border border-b-0 px-3 py-2 text-sm font-medium transition-all ${
+                  onClick={() => handleSelect(project)}
+                  aria-pressed={isSelected}
+                  className={`relative shrink-0 rounded-t-lg border border-b-0 px-3 py-2 text-sm font-medium whitespace-nowrap transition-all sm:px-4 ${
                     isSelected
                       ? "z-20 border-teal/40 bg-graphite text-teal"
                       : "z-10 border-white/10 bg-white/5 text-white/50 hover:text-white"
@@ -44,8 +63,6 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
 
           {/* CONTENIDO */}
           <div className="relative min-h-80">
-            {" "}
-            {/* Altura de la Carpeta*/}
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedProject.slug}
