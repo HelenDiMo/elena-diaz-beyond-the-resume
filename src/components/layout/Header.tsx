@@ -1,60 +1,57 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
 import LanguageToggle from "@/components/ui/LanguageToggle";
-/* import ThemeToggle from "./ThemeToggle"; -> PORQUE DE MOMENTO NO LO VAMOS A UTILIZAR*/
 
 export default function Header() {
   return (
-    <header className="border-b">
+    <header className="sticky top-0 z-50 border-b border-teal/20 bg-graphite/90 backdrop-blur-md">
       <Container>
-        {/*<div className="flex flex-col items-center gap-4 py-6 md:flex-row md:justify-center">
-        YA NO NOS HACE FALTA TODO ESTO PORQUE NO TENEMOS UN BLOQUE DE MARCA */}
-
-        <div className="flex items-center justify-center py-6">
-          {/*<div>
-            <h1 className="text-oceanic">Elena Díaz</h1> 
-            <p className="text-teal">Beyond the Resume</p>
-          </div>     -> QUITAMOS EL TITULITO */}
-
-          <div className="flex items-center gap-6">
+        <div className="flex items-center justify-center py-4 md:py-5">
+          <div className="flex w-full items-center justify-center gap-6 md:gap-10">
+            {/* Navegación */}
             <nav>
-              <ul className="flex flex-wrap justify-left gap-4 md:gap-6">
+              <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:gap-x-8">
                 <li>
                   <Link
                     href="/"
-                    className="transition-colors hover:text-oceanic"
+                    className="text-sm font-medium text-white/70 transition-colors hover:text-oceanic md:text-base"
                   >
                     Inicio
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/#experience"
-                    className="transition-colors hover:text-oceanic"
+                    className="text-sm font-medium text-white/70 transition-colors hover:text-oceanic md:text-base"
                   >
                     Experiencia
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/#skills"
-                    className="transition-colors hover:text-oceanic"
+                    className="text-sm font-medium text-white/70 transition-colors hover:text-oceanic md:text-base"
                   >
-                    Habilidades & Herramientas
+                    Habilidades
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/#projects"
-                    className="transition-colors hover:text-oceanic"
+                    className="text-sm font-medium text-white/70 transition-colors hover:text-oceanic md:text-base"
                   >
                     Proyectos
                   </Link>
                 </li>
+
+                {/* CTA */}
                 <li>
                   <Link
                     href="/#contact"
-                    className="transition-colors hover:text-oceanic"
+                    className="rounded-full border border-teal/50 bg-teal/10 px-4 py-2 text-sm font-medium text-teal transition-all hover:-translate-y-0.5 hover:border-oceanic hover:bg-oceanic hover:text-graphite md:px-5 md:text-base"
                   >
                     Contacto
                   </Link>
@@ -62,11 +59,10 @@ export default function Header() {
               </ul>
             </nav>
 
-            <div className="flex items-right gap-2">
-              {/* <LanguageToggle />  --> DE MOMENTO NO LO VAMOS A USAR*/}
-
-              {/* <ThemeToggle /> -> PORQUE DE MOMENTO NO LO VAMOS A UTILIZAR */}
-            </div>
+            {/* Idioma 
+            <div className="shrink-0">
+              <LanguageToggle />
+            </div> */}
           </div>
         </div>
       </Container>
