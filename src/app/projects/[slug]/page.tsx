@@ -170,31 +170,31 @@ export default async function ProjectPage({
           </section>
         )}
 
-        {/* Video */}
+  {/* Video */}
         {project.video && (
           <section className="mt-24 border-t pt-16">
             <p className="text-sm font-medium uppercase tracking-[0.3em]">
               Demo
             </p>
-
+ 
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">
               Explora el proyecto
             </h2>
-
+ 
             <div className="mt-10 overflow-hidden rounded-2xl border">
-              <video
-                className="h-auto w-full"
-                controls
-                playsInline
-                preload="metadata"
-              >
-                <source src={project.video} type="video/mp4" />
-                Tu navegador no soporta la reproducción de vídeo.
-              </video>
+              <div className="relative aspect-video">
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src={project.video}
+                  title="Demo del proyecto"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </section>
         )}
-
+        
         {/* Gallery */}
         {project.gallery && project.gallery.length > 0 && (
           <section className="mt-24 border-t pt-16">
