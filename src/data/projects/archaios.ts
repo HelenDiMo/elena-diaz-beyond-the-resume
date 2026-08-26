@@ -104,8 +104,8 @@ export const archaios: Project = {
     },
   ],
 
-  video: "https://youtu.be/48uPGrgYWwU",
-
+  video: "https://www.youtube.com/embed/48uPGrgYWwU",
+  
   gallery: [
     {
       src: "/projects/archaios/dashboard-overview.png",
