@@ -153,7 +153,7 @@ export const tinderjob: Project = {
     },
   ],
 
-  video: "/projects/tinderjob/demo_tinderjob.mp4",
+  video: "https://www.youtube.com/embed/Mosb8xkMNVI",
 
   gallery: [
     {
