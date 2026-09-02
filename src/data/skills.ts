@@ -165,6 +165,11 @@ export const skills = {
         logo: "/logos/github-teal-007880.svg",
       },
       {
+        name: "GitHub Actions",
+        logo: "/logos/githubactions-teal-007880.svg",
+      },
+
+      {
         name: "VS Code",
         logo: "/logos/vscode-teal-007880.svg",
       },
