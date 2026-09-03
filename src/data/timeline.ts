@@ -105,6 +105,6 @@ export const timeline = [
       },
     ],
     description:
-      "Nueva etapa en la que integro mi experiencia de negocio y financiera con formación y la aplicación estratégica de análisis de datos, Python y modelos de Machine Learning/IA para resolver problemas de negocio y finanzas. Desarrollo de pipelines, visualización analítica y automatización para optimizar la toma de decisiones.",
+      "Nueva etapa en la que integro mi experiencia con formación y la aplicación estratégica de análisis de datos, Python y modelos de Machine Learning/IA para resolver problemas de negocio y finanzas. Desarrollo de pipelines, visualización analítica y automatización para optimizar la toma de decisiones.",
   },
 ];
