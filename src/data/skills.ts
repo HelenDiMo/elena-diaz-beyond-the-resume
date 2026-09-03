@@ -48,7 +48,7 @@ export const skills = {
   },
 
   data: {
-    title: "Data",
+    title: "Data & Analytics",
     description:
       "Competencias para transformar datos en información útil mediante análisis, limpieza, visualización y herramientas de Business Intelligence.",
     items: [
@@ -79,10 +79,6 @@ export const skills = {
       {
         name: "Seaborn",
         logo: "/logos/seaborn-official.svg",
-      },
-      {
-        name: "Scikit-learn",
-        logo: "/logos/scikit-learn.svg",
       },
       {
         name: "Power BI",
@@ -124,7 +120,7 @@ export const skills = {
   },
 
   ai: {
-    title: "AI",
+    title: "Inteligencia Artificial & ML",
     description:
       "Formación y experiencia práctica desarrollada a través de proyectos relacionados con inteligencia artificial y machine learning.",
     items: [
@@ -137,12 +133,25 @@ export const skills = {
         logo: "/logos/ai-generative-teal-007880.svg",
       },
       {
+        name: "Scikit-learn",
+        logo: "/logos/scikit-learn.svg",
+      },
+
+      {
         name: "Prompt Engineering",
         logo: "/logos/prompt-teal-007880.svg",
       },
       {
         name: "AI Workflows",
         logo: "/logos/workflow-teal-007880.svg",
+      },
+      {
+        name: "Streamlit",
+        logo: "/logos/streamlit-teal-007880.svg",
+      },
+      {
+        name: "FastAPI",
+        logo: "/logos/fastapi-teal-007880.svg",
       },
     ],
   },
@@ -172,10 +181,6 @@ export const skills = {
       {
         name: "VS Code",
         logo: "/logos/vscode-teal-007880.svg",
-      },
-      {
-        name: "Streamlit",
-        logo: "/logos/streamlit-teal-007880.svg",
       },
       {
         name: "Docker",
@@ -224,10 +229,6 @@ export const skills = {
       {
         name: "OOP / POO",
         logo: "/logos/opp-teal-007880.svg",
-      },
-      {
-        name: "FastAPI",
-        logo: "/logos/fastapi-teal-007880.svg",
       },
       {
         name: "PyTest",
