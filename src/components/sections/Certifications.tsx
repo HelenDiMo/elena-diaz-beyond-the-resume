@@ -64,18 +64,18 @@ export default function Certifications() {
 
         <EducationCard
           logo="/certifications/logos/uca.png"
-          title="Doble Diplomatura en Turismo y Ciencias Empresariales"
-          institution="Universidad de Cádiz"
-          year="2012"
-        />
-
-        <EducationCard
-          logo="/certifications/logos/uca.png"
           title="Máster en Dirección y Gestión de Empresas Turísticas"
           institution="Universidad de Cádiz"
           year="2013"
         />
       </div>
+
+      <EducationCard
+        logo="/certifications/logos/uca.png"
+        title="Doble Diplomatura en Turismo y Ciencias Empresariales"
+        institution="Universidad de Cádiz"
+        year="2012"
+      />
 
       <h3 className="mt-12 text-2xl font-bold text-teal">
         Formación Complementaria y certificaciones
