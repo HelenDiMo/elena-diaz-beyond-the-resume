@@ -1,6 +1,6 @@
 export const skills = {
   business: {
-    title: "Gestión y Operaciones",
+    title: "Gestión & Operaciones",
     description:
       "Experiencia profesional en administración, finanzas, contabilidad, operaciones y gestión de procesos de negocio.",
     items: [
