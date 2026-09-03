@@ -16,7 +16,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-teal"
           >
-            Business · Data · AI
+            Data & AI · Business Intelligence · Automatización
           </motion.p>
 
           {/* Nombre */}
