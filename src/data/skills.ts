@@ -157,7 +157,7 @@ export const skills = {
   },
 
   tools: {
-    title: "Herramientas",
+    title: "Desarrollo & Entorno",
     description:
       "Ecosistema de herramientas utilizadas para desarrollar, analizar, visualizar, documentar y desplegar proyectos.",
     items: [
