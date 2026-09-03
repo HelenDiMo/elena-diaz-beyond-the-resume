@@ -201,7 +201,7 @@ export const certifications: Certification[] = [
     description:
       "Formación sobre RRSS, herramientas, papel del CM, fidelización y creación de contenidos.",
     credentialUrl:
-      "/certifications/diploma/andalucia-comp-digital-cm-medio.pdf",
+      "/certifications/diploma/andalucia-comp-digital-cm-avanzado.pdf",
     logo: "/certifications/logos/acd-euroformac.svg",
   },
 
