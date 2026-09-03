@@ -63,7 +63,7 @@ export default function Skills() {
           </p>
 
           <h2 className="mt-4 text-4xl font-bold md:text-5xl text-oceanic">
-            Un perfil 360º
+            Perfil 360º
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed">
