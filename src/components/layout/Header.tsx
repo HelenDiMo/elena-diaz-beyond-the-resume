@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
+import Image from "next/image";
 import LanguageToggle from "@/components/ui/LanguageToggle";
 
 export default function Header() {
@@ -58,6 +59,41 @@ export default function Header() {
                 </li>
               </ul>
             </nav>
+
+            {/* Redes profesionales */}
+            <div className="flex shrink-0 items-center gap-3">
+              <a
+                href="https://github.com/HelenDiMo"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="transition-transform hover:-translate-y-0.5"
+              >
+                <Image
+                  src="/logos/github-007880.svg"
+                  alt="GitHub"
+                  width={40}
+                  height={24}
+                  className="opacity-70 transition-opacity hover:opacity-100"
+                />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/elena-diazmo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="transition-transform hover:-translate-y-0.5"
+              >
+                <Image
+                  src="/logos/linkedin-007880.svg"
+                  alt="LinkedIn"
+                  width={40}
+                  height={24}
+                  className="opacity-70 transition-opacity hover:opacity-100"
+                />
+              </a>
+            </div>
 
             {/* Idioma 
             <div className="shrink-0">
