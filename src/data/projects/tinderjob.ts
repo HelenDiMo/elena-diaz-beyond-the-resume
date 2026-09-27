@@ -10,7 +10,7 @@ export const tinderjob: Project = {
   /* DESCRIPCIÓN PARA LA TARJETA */
 
   description:
-    "Proyecto de analítica avanzada y automatización para analizar el mercado laboral tecnológico en España. A partir de múltiples fuentes de datos, el proyecto combina web scraping, procesamiento y análisis estadístico para identificar las competencias más demandadas, tendencias salariales y patrones del mercado, incorporando además un sistema de matching que conecta las habilidades de un candidato con las ofertas disponibles.",
+    "Plataforma analítica y de automatización sobre el mercado laboral tech en España. Integra web scraping, análisis estadístico de salarios y demanda de habilidades, junto a un algoritmo de matching perfil-vacante.",
 
   /* DESCRIPCIÓN DE LA PAG. INDIVIDUAL */
 
@@ -212,7 +212,7 @@ export const tinderjob: Project = {
   ],
   github: "https://github.com/HelenDiMo/TinderJob.git",
 
-  image: "/projects/tinderjob/logo.png",
+  image: "/projects/tinderjob/tinderjob-card.png",
 
   demoUrl: "https://tinderjob-bootcamp.streamlit.app/",
 };
