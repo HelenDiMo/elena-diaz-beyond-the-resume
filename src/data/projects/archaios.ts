@@ -147,7 +147,7 @@ export const archaios: Project = {
     "Data Cleaning",
     "EDA",
     "Visualización de Datos",
-    "Análisis Geospacial",
+    "Análisis Geoespacial",
     "Data Storytelling",
   ],
 
