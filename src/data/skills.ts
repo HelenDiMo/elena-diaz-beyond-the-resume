@@ -130,7 +130,11 @@ export const skills = {
       },
       {
         name: "IA Generativa",
-        logo: "/logos/ai-generative-teal-007880.svg",
+        logo: "/logos/ai-brain-teal-007880.svg",
+      },
+      {
+        name: "LLMs",
+        logo: "/logos/llm-teal-007880.svg",
       },
       {
         name: "Scikit-learn",
@@ -228,7 +232,11 @@ export const skills = {
       },
       {
         name: "WordPress",
-        logo: "/logos/wordpress-007880.svg",
+        logo: "/logos/wordpress-teal-007880.svg",
+      },
+      {
+        name: "Elementor",
+        logo: "/logos/elementor-teal-007880.svg",
       },
       {
         name: "OOP / POO",
