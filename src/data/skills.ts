@@ -2,7 +2,7 @@ export const skills = {
   business: {
     title: "Gestión & Operaciones",
     description:
-      "Experiencia profesional en administración, finanzas, contabilidad, operaciones y gestión de procesos de negocio.",
+      "Experiencia profesional en administración, gestión contable, procesos operativos, marketing digital y coordinación de negocio.",
     items: [
       {
         name: "Dynamics Business Central",
@@ -17,27 +17,27 @@ export const skills = {
         logo: "/logos/s-teal-007880.svg",
       },
       {
-        name: "Administración",
+        name: "Administración Empresarial",
         logo: "/logos/administrator-teal-007880.svg",
       },
       {
-        name: "Contabilidad",
+        name: "Gestión Contable & Fiscal",
         logo: "/logos/accountant-teal-007880.svg",
       },
       {
         name: "Revenue Management",
         logo: "/logos/revenue-management-teal-007880.svg",
       },
-      {
+      /*{ REDUNDANTE
         name: "Operaciones",
         logo: "/logos/operations-teal-007880.svg",
-      },
+      },*/
       {
         name: "Visión de negocio",
         logo: "/logos/eye-teal-007880.svg",
       },
       {
-        name: "Método Agile",
+        name: "Metodologías Ágiles",
         logo: "/logos/agile-teal-007880.svg",
       },
       {
@@ -50,7 +50,7 @@ export const skills = {
   data: {
     title: "Data & Analytics",
     description:
-      "Competencias para transformar datos en información útil mediante análisis, limpieza, visualización y herramientas de Business Intelligence.",
+      "Transformación, modelado y explotación del dato mediante análisis exploratorio, pipelines ETL, bases de datos relacionales y Business Intelligence.",
     items: [
       {
         name: "Python",
@@ -73,60 +73,67 @@ export const skills = {
         logo: "/logos/numpy-teal-007880.svg",
       },
       {
-        name: "Matplotlib",
-        logo: "/logos/matplotlib-teal-007880.svg",
-      },
-      {
-        name: "Seaborn",
-        logo: "/logos/seaborn-official.svg",
-      },
-      {
         name: "Power BI",
         logo: "/logos/powerbi-teal-007880.svg",
       },
+
       {
-        name: "ETL",
+        name: "ETL & Pipelines",
         logo: "/logos/etl-teal-007880-3.svg",
       },
+      {
+        name: "EDA & Limpieza de Datos",
+        logo: "/logos/eda-teal-007880.svg",
+      },
+      {
+        name: "APIs REST",
+        logo: "/logos/api-teal-007880-3.svg",
+      },
+      {
+        name: "Gobernanza de Datos",
+        logo: "/logos/gobernanza-datos-teal-007880.svg",
+      },
+
       {
         name: "Web Scraping",
         logo: "/logos/web-scraping-teal-007880.svg",
       },
-      {
+
+      /*{
         name: "Data Cleaning",
         logo: "/logos/data-cleaning-teal-007880.svg",
-      },
-      {
-        name: "EDA",
-        logo: "/logos/eda-teal-007880.svg",
       },
       {
         name: "Visualización de datos",
         logo: "/logos/data-viz-teal-007880.svg",
       },
       {
-        name: "Gobernanza de Datos",
-        logo: "/logos/gobernanza-datos-teal-007880.svg",
-      },
-      {
         name: "CRUD",
         logo: "/logos/crud-teal-007880.svg",
       },
-      {
-        name: "APIs",
-        logo: "/logos/api-teal-007880-3.svg",
+            /*{
+        name: "Matplotlib",
+        logo: "/logos/matplotlib-teal-007880.svg",
       },
+      {
+        name: "Seaborn",
+        logo: "/logos/seaborn-official.svg",
+      },*/
     ],
   },
 
   ai: {
     title: "Inteligencia Artificial & ML",
     description:
-      "Formación y experiencia práctica desarrollada a través de proyectos relacionados con inteligencia artificial y machine learning.",
+      "Diseño e implementación de modelos de Machine Learning, flujos de trabajo con IA Generativa y desarrollo de aplicaciones analíticas interactivas.",
     items: [
       {
         name: "Machine Learning",
         logo: "/logos/machine-learning-teal-007880.svg",
+      },
+      {
+        name: "Scikit-learn",
+        logo: "/logos/scikit-learn.svg",
       },
       {
         name: "IA Generativa",
@@ -136,11 +143,6 @@ export const skills = {
         name: "LLMs",
         logo: "/logos/llm-teal-007880.svg",
       },
-      {
-        name: "Scikit-learn",
-        logo: "/logos/scikit-learn.svg",
-      },
-
       {
         name: "Prompt Engineering",
         logo: "/logos/prompt-teal-007880.svg",
@@ -163,11 +165,15 @@ export const skills = {
   tools: {
     title: "Desarrollo & Entorno",
     description:
-      "Ecosistema de herramientas utilizadas para desarrollar, analizar, visualizar, documentar y desplegar proyectos.",
+      "Entorno de desarrollo, control de versiones, containerización, pruebas automatizadas y tecnologías para el despliegue y desarrollo de soluciones.",
     items: [
       {
-        name: "Microsoft Office",
-        logo: "/logos/microsoft-office-teal-007880.svg",
+        name: "Docker",
+        logo: "/logos/docker-teal-007880.svg",
+      },
+      {
+        name: "WSL2 / Ubuntu",
+        logo: "/logos/ubuntu-teal-007880.svg",
       },
       {
         name: "Git",
@@ -181,42 +187,51 @@ export const skills = {
         name: "GitHub Actions",
         logo: "/logos/githubactions-teal-007880.svg",
       },
-
+      {
+        name: "PyTest",
+        logo: "/logos/pytest-teal-007880.svg",
+      },
       {
         name: "VS Code",
         logo: "/logos/vscode-teal-007880.svg",
-      },
-      {
-        name: "Docker",
-        logo: "/logos/docker-teal-007880.svg",
-      },
-      {
-        name: "Google Colab",
-        logo: "/logos/googlecolab-teal-007880.svg",
-      },
-      {
-        name: "WSL2 / Ubuntu",
-        logo: "/logos/ubuntu-teal-007880.svg",
-      },
-      {
-        name: "Notion",
-        logo: "/logos/notion-teal-007880.svg",
-      },
-      {
-        name: "Next.js",
-        logo: "/logos/next-teal-007880.svg",
-      },
-      {
-        name: "React",
-        logo: "/logos/react-teal-007880.svg",
       },
       {
         name: "TypeScript",
         logo: "/logos/ts-teal-007880.svg",
       },
       {
+        name: "React / Next.js",
+        logo: "/logos/next-teal-007880.svg",
+      },
+      {
         name: "Tailwind CSS",
         logo: "/logos/tailwind-css-teal-007880.svg",
+      },
+      {
+        name: "WordPress",
+        logo: "/logos/wordpress-teal-007880.svg",
+      },
+      {
+        name: "Elementor",
+        logo: "/logos/elementor-teal-007880.svg",
+      },
+
+      /*{
+        name: "Microsoft Office",
+        logo: "/logos/microsoft-office-teal-007880.svg",
+      },
+
+      {
+        name: "Google Colab",
+        logo: "/logos/googlecolab-teal-007880.svg",
+      },
+      {
+        name: "Notion",
+        logo: "/logos/notion-teal-007880.svg",
+      },
+      {
+        name: "React",
+        logo: "/logos/react-teal-007880.svg",
       },
       {
         name: "Framer Motion / Motion",
@@ -231,29 +246,42 @@ export const skills = {
         logo: "/logos/html-teal-007880.svg",
       },
       {
-        name: "WordPress",
-        logo: "/logos/wordpress-teal-007880.svg",
-      },
-      {
-        name: "Elementor",
-        logo: "/logos/elementor-teal-007880.svg",
-      },
-      {
         name: "OOP / POO",
         logo: "/logos/opp-teal-007880.svg",
-      },
-      {
-        name: "PyTest",
-        logo: "/logos/pytest-teal-007880.svg",
-      },
+      },*/
     ],
   },
 
   softSkills: {
     title: "Soft Skills",
     description:
-      "Competencias desarrolladas a través de la experiencia profesional, la gestión de equipos y el aprendizaje continuo.",
+      "Competencias consolidadas a través de la gestión de equipos, liderazgo operativo, transferencia de conocimiento y cultura de mejora continua.",
     items: [
+      {
+        name: "Liderazgo & Gestión",
+        logo: "/logos/lead-teal-007880.svg",
+      },
+      {
+        name: "Trabajo en equipo",
+        logo: "/logos/team-teal-007880.svg",
+      },
+      {
+        name: "Comunicación Efectiva",
+        logo: "/logos/communication-teal-007880.svg",
+      },
+      {
+        name: "Resolución de problemas",
+        logo: "/logos/troubleshoot-teal-007880.svg",
+      },
+      {
+        name: "Atención al detalle",
+        logo: "/logos/attention-detail-teal-007880.svg",
+      },
+      {
+        name: "Organización & Priorización",
+        logo: "/logos/organizacion-teal-007880.svg",
+      },
+
       {
         name: "Adaptabilidad",
         logo: "/logos/adapt-teal-007880-3.svg",
@@ -263,35 +291,11 @@ export const skills = {
         logo: "/logos/learning-brain-teal-007880-2.svg",
       },
       {
-        name: "Organización",
-        logo: "/logos/organizacion-teal-007880.svg",
-      },
-      {
-        name: "Comunicación",
-        logo: "/logos/communication-teal-007880.svg",
-      },
-      {
-        name: "Atención al detalle",
-        logo: "/logos/attention-detail-teal-007880.svg",
-      },
-      {
-        name: "Resolución de problemas",
-        logo: "/logos/troubleshoot-teal-007880.svg",
-      },
-      {
-        name: "Trabajo en equipo",
-        logo: "/logos/team-teal-007880.svg",
-      },
-      {
-        name: "Liderazgo",
-        logo: "/logos/lead-teal-007880.svg",
-      },
-      {
-        name: "Formación y Mentoring",
+        name: "Formación & Mentoring",
         logo: "/logos/teach-teal-007880.svg",
       },
       {
-        name: "Documentación técnica y SOPs",
+        name: "Documentación & SOPs",
         logo: "/logos/sops-teal-007880.svg",
       },
     ],
