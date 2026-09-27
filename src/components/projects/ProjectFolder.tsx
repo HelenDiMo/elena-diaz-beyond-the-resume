@@ -60,7 +60,7 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
                       }}
                     />
                   ) : (
-                    <div className="absolute inset-0 z-0 rounded-t-lg border border-b-0 border-white/5 bg-white/[0.03]" />
+                    <div className="absolute inset-0 z-0 rounded-t-lg border border-b-0 border-white/5 bg-white/3" />
                   )}
 
                   <span
@@ -78,7 +78,7 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
           </div>
 
           {/* CONTENIDO CON DISOLUCIÓN PURA (SIN DESPLAZAMIENTO VERTICAL) */}
-          <div className="relative min-h-[440px]">
+          <div className="relative min-h-110">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedProject.slug}
