@@ -17,7 +17,6 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
     setSelectedProject(project);
 
     const tab = document.getElementById(`project-tab-${project.slug}`);
-
     tab?.scrollIntoView({
       behavior: "smooth",
       inline: "center",
@@ -37,7 +36,7 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
           {/* PESTAÑAS */}
           <div
             ref={tabsRef}
-            className="hide-scrollbar absolute -top-10 left-0 right-0 flex items-end gap-2 overflow-x-auto px-4 sm:left-6 sm:right-auto sm:px-0"
+            className="hide-scrollbar absolute -top-10 left-0 right-0 flex items-end gap-1.5 overflow-x-auto px-4 sm:left-6 sm:right-auto sm:px-0"
           >
             {projects.map((project) => {
               const isSelected = selectedProject.slug === project.slug;
@@ -48,42 +47,47 @@ export default function ProjectFolder({ projects }: ProjectFolderProps) {
                   id={`project-tab-${project.slug}`}
                   type="button"
                   onClick={() => handleSelect(project)}
-                  aria-pressed={isSelected}
-                  className={`relative shrink-0 rounded-t-lg border border-b-0 px-3 py-2 text-sm font-medium whitespace-nowrap transition-all sm:px-4 ${
-                    isSelected
-                      ? "z-20 border-teal/40 bg-graphite text-teal"
-                      : "z-10 border-white/10 bg-white/5 text-white/50 hover:text-white"
-                  }`}
+                  className="relative shrink-0 rounded-t-lg px-3.5 py-2 text-sm font-medium whitespace-nowrap transition-colors sm:px-4"
                 >
-                  {project.title}
+                  {isSelected ? (
+                    <motion.div
+                      layoutId="activeFolderTab"
+                      className="absolute inset-0 z-10 rounded-t-lg border border-b-0 border-teal/40 bg-graphite"
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 28,
+                      }}
+                    />
+                  ) : (
+                    <div className="absolute inset-0 z-0 rounded-t-lg border border-b-0 border-white/5 bg-white/[0.03]" />
+                  )}
+
+                  <span
+                    className={`relative z-20 transition-colors duration-200 ${
+                      isSelected
+                        ? "font-semibold text-teal"
+                        : "text-white/50 hover:text-white"
+                    }`}
+                  >
+                    {project.title}
+                  </span>
                 </button>
               );
             })}
           </div>
 
-          {/* CONTENIDO */}
-          <div className="relative min-h-80">
+          {/* CONTENIDO CON DISOLUCIÓN PURA (SIN DESPLAZAMIENTO VERTICAL) */}
+          <div className="relative min-h-[440px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedProject.slug}
-                initial={{
-                  opacity: 0,
-                  y: 50,
-                  rotate: -2,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  rotate: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 30,
-                  rotate: 2,
-                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{
-                  duration: 0.45,
-                  ease: "easeOut",
+                  duration: 0.5,
+                  ease: "easeInOut",
                 }}
               >
                 <ProjectCard project={selectedProject} />

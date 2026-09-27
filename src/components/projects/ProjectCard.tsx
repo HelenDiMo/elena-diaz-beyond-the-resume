@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/types/project";
@@ -11,50 +10,62 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 40, rotate: -2 }}
-      animate={{ opacity: 1, y: 0, rotate: 0 }}
-      exit={{ opacity: 0, y: 40, rotate: 2 }}
-      transition={{
-        duration: 0.5,
-        ease: "easeOut",
-      }}
-      className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-xl bg-graphite/40"
-    >
-      {/* Imagen / logo */}
-      {project.image && (
-        <div className="absolute right-3 top-3 flex h-16 w-16 items-center justify-center sm:right-4 sm:top-4 sm:h-20 sm:w-20">
-          <Image
-            src={project.image}
-            alt={`Imagen representativa de ${project.title}`}
-            width={100}
-            height={100}
-            className="h-full w-full object-contain"
-          />
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-graphite/40 backdrop-blur-md transition-all duration-300 hover:border-teal/30 hover:shadow-2xl hover:shadow-teal/5">
+      {/* 1. Marco / Preview del Dashboard */}
+      <div className="relative w-full border-b border-white/10 bg-black/40">
+        {/* Barra superior tipo ventana */}
+        <div className="flex items-center justify-between px-4 py-2 border-b border-white/5 bg-white/2">
+          <div className="flex items-center gap-1.5">
+            <span className="h-2 w-2 rounded-full bg-red-500/60" />
+            <span className="h-2 w-2 rounded-full bg-yellow-500/60" />
+            <span className="h-2 w-2 rounded-full bg-emerald-500/60" />
+          </div>
+          <span className="text-[10px] font-mono tracking-widest text-white/40 uppercase">
+            {project.category}
+          </span>
         </div>
-      )}
 
-      {/* Contenido */}
-      <div className="p-5 pr-24 sm:p-6 sm:pr-28">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-teal">
+        {/* Contenedor compacto con zoom */}
+        <div className="relative h-44 w-full cursor-zoom-in overflow-hidden bg-black/30 sm:h-52">
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={`Vista previa de ${project.title}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-115"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-xs text-white/30">
+              Preview no disponible
+            </div>
+          )}
+
+          <div className="absolute inset-0 bg-linear-to-t from-graphite/90 via-transparent to-transparent pointer-events-none opacity-60" />
+        </div>
+      </div>
+
+      {/* 2. Cuerpo y Metadatos */}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
           {project.category}
         </p>
 
-        <h3 className="mt-3 text-xl font-bold text-white sm:text-2xl">
+        <h3 className="mt-1.5 text-lg font-bold text-white transition-colors duration-200 group-hover:text-teal sm:text-xl">
           {project.title}
         </h3>
 
-        <p className="mt-4 leading-relaxed text-white/70">
+        <p className="mt-2.5 flex-1 text-sm leading-relaxed text-white/70 line-clamp-3">
           {project.description}
         </p>
 
-        {/* Enlaces */}
-        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3">
+        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/10 pt-4 text-sm">
           <Link
             href={`/projects/${project.slug}`}
-            className="font-medium text-teal underline underline-offset-4 transition-colors hover:text-oceanic"
+            className="inline-flex items-center gap-1.5 font-medium text-teal transition-colors hover:text-oceanic"
           >
-            Ver proyecto →
+            Ver proyecto
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </Link>
 
           {project.github && (
@@ -62,9 +73,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-white/60 underline underline-offset-4 transition-colors hover:text-white"
+              className="inline-flex items-center gap-1 font-medium text-white/60 transition-colors hover:text-white"
             >
-              Ver en GitHub ↗
+              Ver en GitHub
+              <span className="text-xs transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
             </a>
           )}
 
@@ -73,13 +85,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-white/60 underline underline-offset-4 transition-colors hover:text-white"
+              className="inline-flex items-center gap-1 font-medium text-white/60 transition-colors hover:text-white"
             >
-              Ver aplicación ↗
+              Ver aplicación
+              <span className="text-xs transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
             </a>
           )}
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

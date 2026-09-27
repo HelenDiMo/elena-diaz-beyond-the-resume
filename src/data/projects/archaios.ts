@@ -152,5 +152,5 @@ export const archaios: Project = {
   ],
 
   github: "https://github.com/HelenDiMo/archaios-data-Intelligence.git",
-  image: "/projects/archaios/adi_logo.png",
+  image: "/projects/archaios/archaios-card.png",
 };
