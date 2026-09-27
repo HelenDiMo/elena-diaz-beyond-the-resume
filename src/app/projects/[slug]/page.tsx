@@ -116,6 +116,43 @@ export default async function ProjectPage({
                       ))}
                     </div>
                   )}
+
+                  {/* Section items: Tarjetas técnicas estructuradas */}
+                  {section.items && section.items.length > 0 && (
+                    <div className="mt-8 max-w-3xl space-y-3">
+                      {section.items.map((item, itemIndex) => {
+                        const parts = item.split(":");
+                        const hasTitle = parts.length > 1;
+                        const title = hasTitle ? parts[0] : null;
+                        const description = hasTitle
+                          ? parts.slice(1).join(":")
+                          : item;
+
+                        return (
+                          <div
+                            key={`${item}-${itemIndex}`}
+                            className="rounded-xl border border-white/10 bg-graphite/40 p-4.5 backdrop-blur-sm transition-colors hover:border-teal/30"
+                          >
+                            {title ? (
+                              <div>
+                                <span className="text-xs font-semibold uppercase tracking-wider text-teal">
+                                  {title.trim()}
+                                </span>
+                                <p className="mt-1 text-sm leading-relaxed text-neutral-300 md:text-base">
+                                  {description.trim()}
+                                </p>
+                              </div>
+                            ) : (
+                              <p className="text-sm leading-relaxed text-neutral-300 md:text-base">
+                                {item}
+                              </p>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+
                   {section.image && (
                     <figure className="mt-10">
                       <div className="overflow-hidden rounded-2xl border">
@@ -155,32 +192,23 @@ export default async function ProjectPage({
                       ))}
                     </div>
                   )}
-
-                  {/* Section items */}
-                  {section.items && section.items.length > 0 && (
-                    <ul className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed">
-                      {section.items.map((item, itemIndex) => (
-                        <li key={`${item}-${itemIndex}`}>• {item}</li>
-                      ))}
-                    </ul>
-                  )}
                 </article>
               ))}
             </div>
           </section>
         )}
 
-  {/* Video */}
+        {/* Video */}
         {project.video && (
           <section className="mt-24 border-t pt-16">
             <p className="text-sm font-medium uppercase tracking-[0.3em]">
               Demo
             </p>
- 
+
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">
               Explora el proyecto
             </h2>
- 
+
             <div className="mt-10 overflow-hidden rounded-2xl border">
               <div className="relative aspect-video">
                 <iframe
@@ -194,7 +222,7 @@ export default async function ProjectPage({
             </div>
           </section>
         )}
-        
+
         {/* Gallery */}
         {project.gallery && project.gallery.length > 0 && (
           <section className="mt-24 border-t pt-16">
@@ -344,6 +372,7 @@ export default async function ProjectPage({
             </div>
           </section>
         )}
+
         {/* Back */}
         <div className="mt-16 border-t pt-8">
           <Link
