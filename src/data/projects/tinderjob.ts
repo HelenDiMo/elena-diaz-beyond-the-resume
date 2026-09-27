@@ -3,79 +3,88 @@ import type { Project } from "@/types/project";
 export const tinderjob: Project = {
   slug: "tinderjob",
   title: "TinderJob",
-  category: "Data · Python · Automatización",
+  category: "Data · Python · Automatización · Web Scraping · Streamlit",
   context: "Bootcamp · Proyecto de equipo",
   tagline: "El Match Perfecto del Talento Tech",
 
   /* DESCRIPCIÓN PARA LA TARJETA */
 
   description:
-    "Plataforma analítica y de automatización sobre el mercado laboral tech en España. Integra web scraping, análisis estadístico de salarios y demanda de habilidades, junto a un algoritmo de matching perfil-vacante.",
+    "Plataforma analítica y motor de recomendación sobre el mercado tech en España. Integra web scraping sobre Tecnoempleo (+1.100 ofertas), análisis estadístico de salarios (sesgo MNAR) y un algoritmo de matching perfil-vacante.",
 
   /* DESCRIPCIÓN DE LA PAG. INDIVIDUAL */
 
   maintext: [
-    "TinderJob nace como una solución de analítica avanzada para analizar el mercado laboral tecnológico en España y transformar datos dispersos de empleo en información útil para la toma de decisiones.",
-    "El proyecto combina extracción automatizada de ofertas, análisis estadístico, detección de sesgos y un sistema de matching capaz de comparar las habilidades de un candidato con las demandas reales del mercado.",
+    "Plataforma analítica integral diseñada para monitorizar la demanda real de empleo tecnológico en España, procesando y homogeneizando más de 1.100 ofertas de trabajo extraídas mediante web scraping junto a fuentes internacionales de referencia.",
+    "El proyecto resuelve la brecha de información entre talento y vacantes: combina pipelines automatizados de datos, auditoría estadística de sesgos salariales (Missing Not At Random) y un motor de recomendación interactivo en Streamlit que calcula la afinidad técnica entre el CV del candidato y las ofertas activas.",
   ],
 
   heroImage: "/projects/tinderjob/hero.png",
 
   role: {
-    title: "Scrum Master · Team Support · QA & Presentation Lead",
+    title: "Scrum Master · QA Lead & Data Pipeline Support",
     description:
-      "Coordinación y seguimiento del equipo, apoyo durante el desarrollo, revisión de calidad y preparación de la presentación final.",
+      "Liderazgo ágil del equipo mediante ceremonias Scrum, supervisión del control de calidad del dato (validación de esquemas y consistencia de pipelines) y preparación de la presentación ejecutiva final.",
   },
 
   sections: [
     {
       title: "Del problema de negocio a una solución basada en datos",
       content: [
-        "El proyecto fue desarrollado para DataTalent Solutions S.L. (empresa ficticia), con el objetivo de obtener evidencia empírica sobre las habilidades más demandadas, la distribución salarial, los perfiles tecnológicos con mayor presencia y las relaciones entre experiencia, competencias y salario.",
-        "El reto no consistía únicamente en analizar ofertas de empleo, sino en construir un sistema reproducible que permitiera transformar diferentes fuentes de datos en información útil para orientar programas de formación y reskilling tecnológico.",
+        "Desarrollado para el caso de uso corporativo de DataTalent Solutions S.L., con la misión de sustentar con evidencia cuantitativa el diseño de programas de formación y reskilling profesional.",
+        "El objetivo principal fue responder empíricamente a tres preguntas clave: qué tecnologías concentran la demanda real, cómo impacta la experiencia en la retribución y qué porcentaje de vacantes ofrece trabajo remoto según el tamaño corporativo.",
       ],
     },
     {
-      title: "Extracción, limpieza y preparación de datos",
+      title: "Pipeline de Ingesta, Calidad y Depuración Estadística",
       content: [
-        "El equipo construyó un pipeline de datos que combina diferentes fuentes para analizar el mercado tecnológico desde perspectivas complementarias.",
-        "El proceso incluye extracción automatizada mediante web scraping sobre Tecnoempleo, limpieza y normalización con Pandas, tratamiento de valores nulos y duplicados, transformación de variables salariales y detección de valores atípicos mediante el método del rango intercuartílico.",
+        "Construcción de un pipeline modular y reproducible en Python enfocado en la extracción directa de portales locales y la homogeneización de variables heterogéneas.",
+      ],
+      items: [
+        "Web Scraping automatizado: Extracción sistemática con BeautifulSoup y Requests sobre Tecnoempleo, recopilando 1.148 ofertas activas distribuidas en 24 perfiles profesionales tech.",
+        "Tratamiento de outliers e IQR: Normalización de bandas salariales anuales y eliminación de valores atípicos extremos mediante el método del rango intercuartílico (IQR 1.5).",
+        "Auditoría de datos ausentes (MNAR): Identificación de que solo el 19,3% de las ofertas publican salario, modelando el patrón de omisión no aleatoria (Missing Not At Random) para no falsear los estadísticos.",
+        "Extracción de entidades técnicas: Procesamiento y búsqueda por patrones en descripciones no estructuradas para aislar menciones a más de 30 lenguajes, frameworks y bases de datos.",
       ],
       steps: [
-        { number: "01", title: "Extracción" },
-        { number: "02", title: "Limpieza" },
-        { number: "03", title: "Normalización" },
-        { number: "04", title: "Análisis" },
-        { number: "05", title: "Modelado" },
-        { number: "06", title: "Visualización" },
+        { number: "01", title: "Scraping & Ingesta" },
+        { number: "02", title: "Limpieza & IQR" },
+        { number: "03", title: "Auditoría MNAR" },
+        { number: "04", title: "EDA & Correlación" },
+        { number: "05", title: "Motor de Matching" },
+        { number: "06", title: "App en Streamlit" },
       ],
     },
     {
-      title: "Una decisión basada en datos",
+      title: "Pivote estratégico: Decisión guiada por la calidad del dato",
       content: [
-        "Durante las primeras fases del proyecto detectamos que el dataset inicialmente previsto, basado en ofertas de LinkedIn, presentaba un fuerte sesgo de geolocalización: los registros disponibles pertenecían a Estados Unidos y no representaban adecuadamente el mercado español que necesitábamos estudiar.",
-        "En lugar de continuar trabajando con una fuente que no respondía al objetivo de negocio, el equipo decidió pivotar y combinar fuentes complementarias: Stack Overflow Developer Survey, Data Science Job Salaries y datos extraídos directamente de Tecnoempleo.",
-        "Esta decisión permitió construir un análisis más alineado con el contexto español y, al mismo tiempo, incorporar una dimensión específica de calidad y sesgo de los datos.",
-      ],
-    },
-
-    {
-      title: "Análisis del mercado tecnológico",
-      content: [
-        "Los notebooks desarrollados permiten estudiar la demanda de perfiles y competencias técnicas, la distribución salarial, las modalidades de trabajo y las relaciones entre diferentes variables del mercado laboral.",
-        "El análisis incluye estadística descriptiva, correlaciones, agrupaciones, tablas dinámicas y modelos de probabilidad condicional para explorar escenarios como la probabilidad de alcanzar salarios elevados según el nivel de experiencia o el acceso al trabajo remoto según el tamaño de la empresa.",
+        "Durante la fase exploratoria detectamos que el dataset inicial previsto (ofertas de LinkedIn) presentaba un sesgo territorial crítico: la totalidad de los registros correspondían al mercado estadounidense, invalidando cualquier conclusión sobre España.",
+        "En lugar de forzar conclusiones espurias, el equipo pivotó la arquitectura: se integró el scraping directo de Tecnoempleo con el Stack Overflow Developer Survey y el repositorio Data Science Job Salaries.",
+        "Este cambio garantizó rigor metodológico, permitiendo contrastar la realidad del tejido productivo español frente a los estándares de la industria global.",
       ],
     },
 
     {
-      title: "TinderMatch",
-
+      title: "Modelado Estadístico y Probabilidad Condicional",
       content: [
-        "El proyecto incorpora un motor de matching que transforma el análisis del mercado en una herramienta orientada directamente al candidato.",
+        "La exploración analítica no se limitó a frecuencias descriptivas: se implementaron modelos de probabilidad condicional para extraer patrones sobre el mercado laboral.",
+      ],
+      items: [
+        "Probabilidad de salario alto según seniority: Cálculo empírico de la probabilidad acumulada P(Salario > 45K | Nivel de experiencia).",
+        "Acceso a teletrabajo según estructura: Análisis condicional P(Remoto 100% | Tamaño de empresa), identificando mayor flexibilidad en scale-ups frente a corporaciones tradicionales.",
+        "Matrices de coocurrencia tecnológica: Identificación de sinergias habituales en las ofertas (ej. demanda combinada Python-SQL-Cloud frente al ecosistema Java-Spring).",
+      ],
+    },
 
-        "A partir de un CV en PDF o texto plano, el sistema identifica tecnologías y competencias técnicas y las compara con las habilidades demandadas en las ofertas recopiladas.",
-
-        "El resultado muestra las vacantes ordenadas según porcentaje de compatibilidad, las habilidades que ya posee el candidato, las competencias que podría desarrollar y un enlace directo a la oferta original.",
+    {
+      title: "TinderMatch: Motor de Recomendación Candidato-Vacante",
+      content: [
+        "Módulo interactivo que transforma los insights del mercado en una herramienta de recomendación personalizada para el candidato.",
+      ],
+      items: [
+        "Parsing y lectura de CV: Extracción y escaneo de texto desde archivos PDF o texto plano para identificar competencias coincidentes con el diccionario tecnológico.",
+        "Algoritmo de scoring de compatibilidad: Cálculo de coincidencia porcentual entre las habilidades identificadas en el perfil y los requisitos técnicos de cada vacante.",
+        "Análisis de brecha (Gap Analysis): Generación de vacantes recomendadas ordenadas por afinidad, mostrando competencias cubiertas y tecnologías sugeridas para alcanzar el perfil óptimo.",
       ],
 
       image: {
@@ -86,10 +95,9 @@ export const tinderjob: Project = {
       },
     },
     {
-      title: "Resultado",
+      title: "Despliegue y Producto Final",
       content: [
-        "El resultado es una aplicación desarrollada con Streamlit que integra análisis estadístico, visualizaciones interactivas y un sistema de recomendación de ofertas en una única interfaz.",
-        "La herramienta permite explorar el mercado tecnológico español, analizar salarios y modalidades de trabajo, estudiar sesgos y utilizar TinderMatch para identificar oportunidades laborales en función del perfil de cada candidato.",
+        "El producto se consolidó en una aplicación web interactiva desarrollada en Streamlit y desplegada en la nube, con visualizaciones dinámicas en Plotly y filtros multidimensionales por provincia, modalidad, salario y rol.",
       ],
     },
   ],
@@ -97,36 +105,29 @@ export const tinderjob: Project = {
   /* GOVERNANCE DEL DATO */
 
   governance: {
-    title: "Tomar decisiones también implica cuestionar los datos",
-
+    title: "Gobernanza y Auditoría de Calidad del Dato",
     content:
-      "El proyecto incorpora un análisis específico de calidad y sesgos para evitar interpretar los resultados como una representación completa del mercado laboral. Las diferentes fuentes presentan limitaciones de cobertura, selección y disponibilidad de información que pueden afectar a las conclusiones.",
-
+      "Toda decisión analítica responsable exige explicitar los márgenes de representatividad y las asimetrías detectadas en las fuentes utilizadas:",
     limitations: [
       {
-        title: "Sesgo de fuente",
+        title: "Sesgo de fuente y selección (Tecnoempleo)",
         description:
-          "Las diferentes fuentes utilizadas no representan de la misma manera el mercado laboral tecnológico y responden a poblaciones y contextos distintos.",
+          "El scraper monitorizó 24 perfiles específicos; las ofertas de perfiles técnicos no catalogados o procedentes de consultoría cerrada no están representadas.",
       },
       {
-        title: "Sesgo geográfico",
+        title: "Asimetría en transparencia salarial (Patrón MNAR)",
         description:
-          "El dataset de Data Science Job Salaries presenta una representación limitada de España frente al conjunto global de registros.",
+          "El 80,7% de las ofertas omite la remuneración. Al no ser una omisión aleatoria, los salarios analizados tienden a reflejar puestos con mayor urgencia de contratación o mejores condiciones.",
       },
       {
-        title: "Datos salariales incompletos",
+        title: "Sesgo geográfico en datasets secundarios",
         description:
-          "Una parte significativa de las ofertas de Tecnoempleo no publica información salarial, lo que introduce un patrón de datos ausentes que no puede considerarse completamente aleatorio.",
+          "El dataset Data Science Job Salaries cuenta con una submuestra reducida en el territorio español, utilizándose únicamente como contraste comparativo global.",
       },
       {
-        title: "Sesgo de selección",
+        title: "Correlación frente a Causalidad",
         description:
-          "El scraper utiliza un conjunto predefinido de 24 perfiles profesionales, por lo que los resultados dependen de los términos de búsqueda seleccionados.",
-      },
-      {
-        title: "Interpretación de los resultados",
-        description:
-          "Las correlaciones y patrones observados permiten identificar relaciones y tendencias, pero no deben interpretarse automáticamente como relaciones causales.",
+          "Las relaciones identificadas entre competencias y bandas retributivas son correlacionales y responden a la coyuntura del mercado en la fecha de extracción.",
       },
     ],
   },
@@ -134,22 +135,21 @@ export const tinderjob: Project = {
   insights: [
     {
       number: "01",
-      title: "Python lidera la demanda tecnológica analizada",
+      title: "Python lidera la demanda tecnológica (14,6% de cuota)",
       description:
-        "Python aparece en 168 de las 1.148 ofertas analizadas, seguido de Java con 159 y SQL con 96, situándose entre las competencias técnicas con mayor presencia en la muestra.",
+        "Python encabeza las menciones técnicas figurando en 168 de las 1.148 ofertas analizadas, seguido de cerca por Java (159) y SQL (96), conformando el núcleo de mayor empleabilidad.",
     },
     {
       number: "02",
-      title:
-        "El salario publicado representa solo una parte del mercado observable",
+      title: "Opacidad retributiva: Solo el 19,3% publica rango salarial",
       description:
-        "Solo 221 de las 1.148 ofertas analizadas incluyen información salarial, lo que supone el 19,3 % de la muestra y obliga a interpretar cualquier análisis salarial teniendo en cuenta este patrón de ausencia.",
+        "Únicamente 221 vacantes de 1.148 transparentan la retribución bruta. Las empresas medianas de producto muestran una propensión un 35% mayor a publicar bandas que las consultoras.",
     },
     {
       number: "03",
-      title: "Los datos ausentes también contienen información",
+      title: "Impacto del sesgo MNAR en la toma de decisiones",
       description:
-        "El análisis MNAR muestra que la ausencia de información salarial no se distribuye de forma completamente aleatoria, por lo que ignorar los valores ocultos puede introducir sesgos en las conclusiones sobre el mercado.",
+        "El análisis estadístico demuestra que ignorar los salarios no reportados distorsionaría las expectativas del profesional al alza, validando la importancia de auditar la calidad del dato antes de emitir recomendaciones.",
     },
   ],
 
@@ -208,8 +208,10 @@ export const tinderjob: Project = {
     "Plotly",
     "Web Scraping",
     "BeautifulSoup",
+    "Text Parsing / Regex",
     "GitHub Actions",
   ],
+
   github: "https://github.com/HelenDiMo/TinderJob.git",
 
   image: "/projects/tinderjob/tinderjob-card.png",
