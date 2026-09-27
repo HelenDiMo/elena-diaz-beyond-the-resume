@@ -227,6 +227,10 @@ export const skills = {
         logo: "/logos/html-teal-007880.svg",
       },
       {
+        name: "WordPress",
+        logo: "/logos/wordpress-007880.svg",
+      },
+      {
         name: "OOP / POO",
         logo: "/logos/opp-teal-007880.svg",
       },
