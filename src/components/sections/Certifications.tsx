@@ -77,7 +77,7 @@ export default function Certifications() {
       </div>
 
       <h3 className="mt-12 text-2xl font-bold text-teal">
-        Formación Complementaria y certificaciones
+        Formación Complementaria y Certificaciones
       </h3>
 
       <p className="mt-4 max-w-2xl leading-relaxed">
