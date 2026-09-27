@@ -3,7 +3,7 @@ import type { Project } from "@/types/project";
 export const archaios: Project = {
   slug: "archaios-data-intelligence",
   category: "Data · Power BI · Base de Datos · EDA",
-  context: "Bootcamp · Proycto individual",
+  context: "Bootcamp · Proyecto individual",
   title: "Archaios Data Intelligence",
   tagline: "Operación Normandía",
 
