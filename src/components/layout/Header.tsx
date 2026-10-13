@@ -72,7 +72,7 @@ export default function Header() {
                   src="/logos/github-007880.svg"
                   alt="GitHub"
                   width={40}
-                  height={24}
+                  height={40}
                   className="opacity-70 transition-opacity hover:opacity-100"
                 />
               </a>
@@ -88,7 +88,7 @@ export default function Header() {
                   src="/logos/linkedin-007880.svg"
                   alt="LinkedIn"
                   width={40}
-                  height={24}
+                  height={40}
                   className="opacity-70 transition-opacity hover:opacity-100"
                 />
               </a>
