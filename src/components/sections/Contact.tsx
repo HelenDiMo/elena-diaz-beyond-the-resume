@@ -87,6 +87,13 @@ export default function Contact() {
                   required
                   className="mt-1.5 w-full rounded-lg border border-white/15 bg-transparent px-4 py-2.5 text-white outline-none transition placeholder:text-white/30 focus:border-teal focus:ring-2 focus:ring-teal/20"
                 />
+
+                <ValidationError
+                  prefix="Nombre"
+                  field="name"
+                  errors={state.errors}
+                  className="mt-1 text-sm text-red-400"
+                />
               </div>
 
               {/* Email */}

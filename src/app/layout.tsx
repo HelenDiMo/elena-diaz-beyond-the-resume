@@ -44,7 +44,7 @@ export default function RootLayout({
 
         <Header />
 
-        <main>{children}</main>
+        <div className="flex-1">{children}</div>
         <Analytics />
 
         <Footer />
