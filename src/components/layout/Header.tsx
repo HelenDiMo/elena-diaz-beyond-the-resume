@@ -1,7 +1,6 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
 import Image from "next/image";
-import LanguageToggle from "@/components/ui/LanguageToggle";
 
 export default function Header() {
   return (

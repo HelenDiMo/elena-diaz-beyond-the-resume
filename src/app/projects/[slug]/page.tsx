@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import ProjectGallery from "@/components/projects/ProjectGallery";
 import { projects } from "@/data/projects";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((project) => project.slug === slug);
+
+  if (!project) {
+    return {};
+  }
+
+  return {
+    title: `${project.title} - Elena Díaz`,
+    description: project.tagline ?? project.description,
+  };
+}
 
 export default async function ProjectPage({
   params,
