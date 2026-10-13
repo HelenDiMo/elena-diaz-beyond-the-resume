@@ -123,22 +123,29 @@ export const exoplanetprofiler: Project = {
 
   video: "",
 
-  /*gallery: [
+  gallery: [
     {
-      src: "/projects/exoplanet/clustering-scatter.png",
-      alt: "Gráfico de dispersión multivariante mostrando los clusters de exoplanetas",
-      title: "Segmentación de familias planetarias",
+      src: "/projects/exoplanet-profiler/1-perfil-exoplanetas.png",
+      alt: "Vista de Perfil de Exoplaneta en la app de Streamlit",
+      title: "Perfil individual y espacio PCA",
       description:
-        "Representación de los clústeres generados según período orbital, radio y masa planetaria tras transformación logarítmica.",
+        "Ficha técnica por cuerpo celeste que clasifica al planeta en su familia estadística y proyecta sus coordenadas en los 4 componentes principales (escala orbital, gradiente térmico, excentricidad y metalicidad a partir de 12 variables).",
     },
     {
-      src: "/projects/exoplanet/silhouette-analysis.png",
-      alt: "Análisis del coeficiente Silhouette para selección de k óptimo",
-      title: "Evaluación de Silhouette Score",
+      src: "/projects/exoplanet-profiler/2-mundos-similares.png",
+      alt: "Módulo de Mundos Similares con proyección PC1 vs PC2",
+      title: "Mundos Similares · Proyección 2D (PC1 vs PC2)",
       description:
-        "Evaluación de la cohesión y separación de clusters para determinar la partición algorítmica óptima.",
+        "Motor de búsqueda de arquetipos planetarios que sitúa al planeta seleccionado frente a los miembros de su misma familia (como Rocosos / Super-Tierras, con 340 mundos y el 50,4% del catálogo).",
     },
-  ],*/
+    {
+      src: "/projects/exoplanet-profiler/3-galaxia-exoplanetaria.png",
+      alt: "Mapa 3D interactivo en el espacio de componentes principales",
+      title: "Galaxia Exoplanetaria · Espacio Latente 3D",
+      description:
+        "Visualización tridimensional interactiva (PC1/PC2/PC3) de los 675 exoplanetas analizados, permitiendo rotar y explorar las fronteras entre poblaciones mayoritarias y anomalías/outliers.",
+    },
+  ],
 
   theme: {
     accent: "#6366F1",
