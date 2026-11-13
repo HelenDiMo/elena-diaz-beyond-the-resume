@@ -36,10 +36,15 @@ export default function RootLayout({
 }>) {
   return (
     <html
+      data-scroll-behavior="smooth"
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body id="top" className="min-h-full flex flex-col">
+      <body
+        id="top"
+        className="min-h-full flex flex-col"
+        suppressHydrationWarning
+      >
         <CursorTrail />
 
         <Header />
